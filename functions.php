@@ -31,3 +31,9 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+function register_childtheme_menus() {
+  register_nav_menu('social', __( 'Social Menu', 'child-theme-textdomain' ));
+}
+
+add_action( 'init', 'register_childtheme_menus' );
