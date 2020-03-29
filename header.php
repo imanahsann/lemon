@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</h2>
 
 		<?php if ( 'container' === $container ) : ?>
-			<div class="container">
+			<div class="container-fluid">
 		<?php endif; ?>
 
 				<!-- Social Menu -->
@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<!-- Main Menu Mobile -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
 				</button>
 
 				<!-- Main Menu -->
