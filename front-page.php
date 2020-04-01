@@ -14,25 +14,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
+            <!-- Logo -->
+            <div class="logo-container col-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="194" height="272" viewBox="0 0 194 272">
+                <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
+                    <g id="Subheading" transform="translate(740 128)">
+                    <text id="_9th" data-name="9th" transform="translate(0 97)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">9th</tspan></text>
+                    </g>
+                    <text id="_" data-name="&amp;" transform="translate(677 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">&amp;</tspan></text>
+                    <text id="Irv_ing" data-name="Irv
+                ing" transform="translate(750 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">I</tspan><tspan y="0" letter-spacing="-0.075em">rv</tspan><tspan x="0" y="74">ing</tspan></text>
+                </g>
+                </svg>
+            </div>
+
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
-
-                <!-- Logo -->
-                <div class="logo-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="194" height="272" viewBox="0 0 194 272">
-                    <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
-                        <g id="Subheading" transform="translate(740 128)">
-                        <text id="_9th" data-name="9th" transform="translate(0 97)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">9th</tspan></text>
-                        </g>
-                        <text id="_" data-name="&amp;" transform="translate(677 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">&amp;</tspan></text>
-                        <text id="Irv_ing" data-name="Irv
-                    ing" transform="translate(750 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">I</tspan><tspan y="0" letter-spacing="-0.075em">rv</tspan><tspan x="0" y="74">ing</tspan></text>
-                    </g>
-                    </svg>
-                </div>
-
 
 				<?php if ( have_posts() ) : ?>
 

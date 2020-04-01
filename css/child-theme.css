@@ -11416,4 +11416,7 @@ a.skip-link {
 #navbarNavDropdown.show {
   padding-bottom: 33px; }
 
+.logo-container svg {
+  width: 100%; }
+
 /*# sourceMappingURL=child-theme.css.map */
