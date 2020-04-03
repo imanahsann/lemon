@@ -1,4 +1,12 @@
 //
+// Global
+//
+
+.container-fluid {
+    max-width: 1140px;
+}
+
+//
 // Navigation Bar
 //
 
@@ -85,4 +93,24 @@
 
 .logo-container svg {
     width: 100%;
+}
+
+//
+// Home Page
+//
+
+.front {
+    display: flex;
+}
+
+.front article {
+    flex: 0 0 50%;
+}
+
+.front article:nth-child(odd) {
+    padding-right: 15px;
+}
+
+.front article:nth-child(even) {
+    padding-left: 15px;
 }

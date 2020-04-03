@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             <!-- Logo -->
             <div class="logo-container col-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="194" height="272" viewBox="0 0 194 272">
+                <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248">
                 <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
                     <g id="Subheading" transform="translate(740 128)">
                     <text id="_9th" data-name="9th" transform="translate(0 97)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">9th</tspan></text>
@@ -31,39 +31,39 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<main class="site-main front" id="main">
 
-				<?php if ( have_posts() ) : ?>
+                <!-- TWO RECENT BLOG POSTS -->
+                <?php $query = new WP_Query( array( 'cat' => 9, 'posts_per_page' => 2 ) ); ?>
 
-					<?php /* Start the Loop */ ?>
+                <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+                    <?php
 
-						<?php
+                    /*
+                        * Include the Post-Format-specific template for the content.
+                        * If you want to override this in a child theme, then include a file
+                        * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                        */
+                    get_template_part( 'loop-templates/content', get_post_format() );
+                    ?>
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
-
-					<?php endwhile; ?>
+                <?php endwhile; ?>
 
 				<?php else : ?>
 
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-				<?php endif; ?>
+                <?php endif; ?>
+
+                <!-- BLOG LINK -->
+                <a href="">More blog ></a>
 
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 

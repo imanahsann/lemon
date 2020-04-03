@@ -11354,6 +11354,9 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.container-fluid {
+  max-width: 1140px; }
+
 .navbar {
   padding: 0; }
 
@@ -11418,5 +11421,21 @@ a.skip-link {
 
 .logo-container svg {
   width: 100%; }
+
+.front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.front article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%; }
+
+.front article:nth-child(odd) {
+  padding-right: 15px; }
+
+.front article:nth-child(even) {
+  padding-left: 15px; }
 
 /*# sourceMappingURL=child-theme.css.map */
