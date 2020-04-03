@@ -33,31 +33,88 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main front" id="main">
 
-                <!-- TWO RECENT BLOG POSTS -->
-                <?php $query = new WP_Query( array( 'cat' => 9, 'posts_per_page' => 2 ) ); ?>
+                <div class="front-blog">
 
-                <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+                    <!-- LOOP THROUGH TWO RECENT BLOG POSTS -->
+                    <?php $query = new WP_Query( array( 'cat' => 9, 'posts_per_page' => 2 ) ); ?>
+                    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-                    <?php
+                        <!-- POST -->
+                        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                    /*
-                        * Include the Post-Format-specific template for the content.
-                        * If you want to override this in a child theme, then include a file
-                        * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                        */
-                    get_template_part( 'loop-templates/content', get_post_format() );
-                    ?>
+                            <div class="blog-thumb-container">
+                                <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                            </div>
 
-                <?php endwhile; ?>
+	                        <header class="entry-header">
 
-				<?php else : ?>
+                                <?php
+                                the_title(
+                                    sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+                                    '</a></h2>'
+                                );
+                                ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+	                        </header><!-- .entry-header -->
 
-                <?php endif; ?>
+                            <div class="entry-content">
+
+                                <?php the_excerpt(); ?>
+
+                                <?php
+                                wp_link_pages(
+                                    array(
+                                        'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                                        'after'  => '</div>',
+                                    )
+                                );
+
+                                edit_post_link(
+                                    sprintf(
+                                        /* translators: %s: Name of current post */
+                                        esc_html__( 'Edit %s', 'understrap' ),
+                                        the_title( '<span class="sr-only">"', '"</span>', false )
+                                    ),
+                                    '<span class="edit-link">',
+                                    '</span>'
+                                );
+
+                                ?>
+
+
+                            </div><!-- .entry-content -->
+
+                            <footer class="entry-footer">
+
+                            <?php
+
+                                $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
+
+                                if ( $tags_list ) {
+                                    /* translators: %s: Tags of current post */
+                                    printf( '<span class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                                }
+
+                            ?>
+
+                            </footer><!-- .entry-footer -->
+
+                        </article><!-- #post-## -->
+
+                    <?php endwhile; ?>
+
+                    <?php else : ?>
+
+                        <?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+                    <?php endif; ?>
+
+                </div>
 
                 <!-- BLOG LINK -->
-                <a href="">More blog ></a>
+                <div class="front-more">
+                    <a href="">More blog ></a>
+                </div>
 
 			</main><!-- #main -->
 

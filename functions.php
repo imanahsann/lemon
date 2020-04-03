@@ -32,8 +32,29 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
+// Add social menu
+
 function register_childtheme_menus() {
   register_nav_menu('social', __( 'Social Menu', 'child-theme-textdomain' ));
 }
 
 add_action( 'init', 'register_childtheme_menus' );
+
+// Remove ellipses in post excerpt
+
+if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
+	/**
+	 * Adds a custom read more link to all excerpts, manually or automatically generated
+	 *
+	 * @param string $post_excerpt Posts's excerpt.
+	 *
+	 * @return string
+	 */
+	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+		if ( ! is_admin() ) {
+			$post_excerpt = $post_excerpt . ' <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
+			'understrap' ) . '</a></p>';
+		}
+		return $post_excerpt;
+	}
+}
