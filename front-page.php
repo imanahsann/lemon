@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
             <!-- Logo -->
-            <div class="logo-container col-2">
+            <div class="logo-container">
                 <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248">
                 <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
                     <g id="Subheading" transform="translate(740 128)">
