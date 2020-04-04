@@ -69,16 +69,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     )
                                 );
 
-                                edit_post_link(
-                                    sprintf(
-                                        /* translators: %s: Name of current post */
-                                        esc_html__( 'Edit %s', 'understrap' ),
-                                        the_title( '<span class="sr-only">"', '"</span>', false )
-                                    ),
-                                    '<span class="edit-link">',
-                                    '</span>'
-                                );
-
                                 ?>
 
 
@@ -92,7 +82,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                                 if ( $tags_list ) {
                                     /* translators: %s: Tags of current post */
-                                    printf( '<span class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                                    printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
                                 }
 
                             ?>

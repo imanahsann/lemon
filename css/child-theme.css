@@ -11368,12 +11368,20 @@ h2 a, .h2 a {
   color: #212529; }
 
 h2 a:hover, .h2 a:hover {
-  color: #495057;
+  color: #212529;
   text-decoration: none; }
 
 p {
   letter-spacing: 0.3px;
   font-size: 1.125rem; }
+
+a {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms; }
+
+a:hover {
+  opacity: 0.8; }
 
 .navbar {
   padding: 0; }
@@ -11386,6 +11394,9 @@ p {
 .navbar-expand-md .navbar-nav .nav-link {
   padding-right: 0.4rem;
   padding-left: 0.4rem; }
+
+.navbar-expand-md .navbar-nav .nav-link:hover {
+  color: #212529; }
 
 #social-menu .nav-link {
   padding-bottom: 0.5rem; }
@@ -11470,5 +11481,39 @@ p {
   display: flex;
   height: 40vh;
   margin-bottom: 18px; }
+
+.btn-secondary {
+  background: none;
+  border: none;
+  color: #E8399E;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.09px;
+  padding: 0;
+  -webkit-transition: none;
+  transition: none; }
+
+.btn-secondary:hover {
+  background: none;
+  border: none;
+  color: #E8399E; }
+
+.tags-links {
+  padding: 0; }
+
+.tags-links a {
+  color: #fff;
+  background-color: #E8399E;
+  padding: 5px 10px;
+  font-size: 1rem;
+  letter-spacing: 0.09px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-transform: lowercase;
+  font-weight: 600; }
+
+.entry-footer {
+  padding: 0 0 30px 0; }
 
 /*# sourceMappingURL=child-theme.css.map */

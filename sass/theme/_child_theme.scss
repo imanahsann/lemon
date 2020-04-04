@@ -24,13 +24,22 @@ h2 a, .h2 a {
 }
 
 h2 a:hover, .h2 a:hover {
-    color: $gray-700;
+    color: $gray-900;
     text-decoration: none;
 }
 
 p {
     letter-spacing: 0.3px;
     font-size: 1.125rem;
+}
+
+a {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 //
@@ -50,6 +59,10 @@ p {
 .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 0.4rem;
     padding-left: 0.4rem;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover {
+    color: $gray-900;
 }
 
 #social-menu .nav-link {
@@ -131,6 +144,8 @@ p {
 // Home Page
 //
 
+// Recent blog posts
+
 .front-blog {
     display: flex;
 }
@@ -147,6 +162,8 @@ p {
     padding-left: 15px;
 }
 
+// Recent blog post featured image
+
 .front-blog article img {
     object-fit: cover;
 }
@@ -155,4 +172,46 @@ p {
     display: flex;
     height: 40vh;
     margin-bottom: 18px;
+}
+
+// Read more link
+
+.btn-secondary {
+    background: none;
+    border: none;
+    color: $secondary;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: 0.09px;
+    padding: 0;
+    transition: none;
+}
+
+.btn-secondary:hover {
+    background: none;
+    border: none;
+    color: $secondary;
+}
+
+// Recent blog post tags
+
+.tags-links {
+    padding: 0;
+}
+
+.tags-links a {
+    color: $white;
+    background-color: $secondary;
+    padding: 5px 10px;
+    font-size: 1rem;
+    letter-spacing: 0.09px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+    font-weight: 600;
+}
+
+.entry-footer {
+    padding: 0 0 30px 0;
 }
