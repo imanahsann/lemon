@@ -201,17 +201,43 @@ a:hover {
 }
 
 .tags-links a {
+    display: inline-block;
     color: $white;
     background-color: $secondary;
     padding: 5px 10px;
     font-size: 1rem;
     letter-spacing: 0.09px;
     margin-right: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-transform: lowercase;
     font-weight: 600;
 }
 
-.entry-footer {
-    padding: 0 0 30px 0;
+.tags-links a:hover {
+    text-decoration: none;
+}
+
+.front-blog .entry-content {
+    padding: 0 0 15px 0;
+}
+
+.front-blog .entry-footer {
+    padding: 0 0 20px 0;
+}
+
+// Read/view more links
+
+.front-more {
+    font-family: $headings-font-family;
+    font-size: 3.125rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.front-more a {
+    color: $gray-900;
+}
+
+.front-more a:hover {
+    text-decoration: none;
 }

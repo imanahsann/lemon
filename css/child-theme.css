@@ -11503,17 +11503,36 @@ a:hover {
   padding: 0; }
 
 .tags-links a {
+  display: inline-block;
   color: #fff;
   background-color: #E8399E;
   padding: 5px 10px;
   font-size: 1rem;
   letter-spacing: 0.09px;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-transform: lowercase;
   font-weight: 600; }
 
-.entry-footer {
-  padding: 0 0 30px 0; }
+.tags-links a:hover {
+  text-decoration: none; }
+
+.front-blog .entry-content {
+  padding: 0 0 15px 0; }
+
+.front-blog .entry-footer {
+  padding: 0 0 20px 0; }
+
+.front-more {
+  font-family: "Playfair Display";
+  font-size: 3.125rem;
+  font-weight: 700;
+  font-style: italic; }
+
+.front-more a {
+  color: #212529; }
+
+.front-more a:hover {
+  text-decoration: none; }
 
 /*# sourceMappingURL=child-theme.css.map */

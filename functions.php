@@ -58,3 +58,12 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		return $post_excerpt;
 	}
 }
+
+// Add # before tag name
+
+function filter_post_tag_term_links($list) {
+    $list = str_replace('rel="tag">', 'rel="tag">#', $list);
+    return $list;
+}
+
+add_filter( 'the_tags', 'filter_post_tag_term_links' );

@@ -103,7 +103,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                 <!-- BLOG LINK -->
                 <div class="front-more">
-                    <a href="">More blog ></a>
+                    <a href="">More Blog ></a>
                 </div>
 
 			</main><!-- #main -->
