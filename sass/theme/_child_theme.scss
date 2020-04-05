@@ -331,7 +331,7 @@ a:hover {
     background: $primary;
     padding: 35px 30px 0 30px;
     @media (max-width: 400px) {
-        padding: 0 15px;
+        padding: 25px 0 0 0;
     }
 }
 
@@ -340,12 +340,19 @@ a:hover {
     margin: auto;
 }
 
+.front-work h3, .front-work .work-info {
+    @media (max-width: 400px) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
 .front-work article {
     display: flex;
-    padding: 0 0 30px 0;
-    @media (max-width: 991px) {
+    padding: 0 0 40px 0;
+    @media (max-width: 767px) {
         flex-direction: column-reverse;
-        padding: 0 0 20px 0;
+        padding: 0 0 30px 0;
     }
 }
 
@@ -353,13 +360,42 @@ a:hover {
     flex: 0 0 30%;
     padding-right: 30px;
     @media (max-width: 991px) {
+        flex: 0 0 40%;
+    }
+    @media (max-width: 767px) {
         flex: 0 0 100%;
+        display: flex;
+    }
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+}
+
+.front-work .entry-header {
+    @media (max-width: 767px) {
+        flex: 0 0 50%;
+        text-align: right;
+        padding-right: 15px;
+    }
+    @media (max-width: 500px) {
+        text-align: left;
+        padding-right: 0;
+    }
+}
+
+.front-work .entry-content {
+    @media (max-width: 767px) {
+        flex: 0 0 50%;
+        padding-left: 15px;
+    }
+    @media (max-width: 500px) {
+        padding-left: 0;;
     }
 }
 
 .front-work .blog-thumb-container {
     width: 100%;
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
         padding-bottom: 20px;
     }
 }
