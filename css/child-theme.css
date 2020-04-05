@@ -11472,8 +11472,9 @@ a:hover {
   line-height: 16px; }
 
 .logo-container {
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 30px;
+  width: 225px;
+  float: left; }
   @media (max-width: 991px) {
     .logo-container {
       width: 180px; } }
@@ -11481,7 +11482,8 @@ a:hover {
     .logo-container {
       width: 100%;
       text-align: center;
-      padding-bottom: 30px; } }
+      padding: 0 0 30px 0;
+      float: none; } }
 
 .logo-container svg {
   width: 100%; }
@@ -11492,7 +11494,9 @@ a:hover {
 .front-blog {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   @media (max-width: 991px) {
     .front-blog {
       -webkit-box-orient: vertical;
