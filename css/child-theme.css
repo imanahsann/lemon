@@ -11372,6 +11372,9 @@ body {
 .wrapper {
   padding: 30px 0; }
 
+#index-wrapper {
+  padding-bottom: 0; }
+
 .col-md {
   padding: 0; }
 
@@ -11402,6 +11405,21 @@ a {
 
 a:hover {
   opacity: 0.8; }
+
+figure {
+  text-align: center; }
+
+figcaption {
+  font-style: italic; }
+
+blockquote p {
+  font-size: 3.75rem;
+  font-style: italic;
+  font-family: "Playfair Display";
+  letter-spacing: -2px; }
+  @media (max-width: 500px) {
+    blockquote p {
+      font-size: 2.5rem; } }
 
 @media (max-width: 400px) {
   .navbar {
@@ -11708,5 +11726,35 @@ a:hover {
 
 .front-work .front-more {
   margin-top: -10px; }
+
+.front-about {
+  padding: 35px 30px 0 30px;
+  max-width: 1140px;
+  margin: auto; }
+  @media (max-width: 400px) {
+    .front-about {
+      padding: 25px 0 0 0; } }
+
+.front-about h3 {
+  text-align: center; }
+
+@media (max-width: 400px) {
+  .front-about figcaption, .front-about p {
+    padding-right: 15px;
+    padding-left: 15px; } }
+
+#wrapper-footer-full {
+  padding: 10px 30px;
+  background: #212529;
+  color: #e9ecef;
+  text-align: center; }
+
+#wrapper-footer-full p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-top: 1rem; }
+
+#wrapper-footer-full a:hover {
+  text-decoration: none; }
 
 /*# sourceMappingURL=child-theme.css.map */

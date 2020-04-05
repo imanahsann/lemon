@@ -111,7 +111,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="front-work">
                     <div class="front-work-content">
                         <h3>Work</h3>
-                        <!-- LOOP THROUGH TWO RECENT BLOG POSTS -->
+                        <!-- LOOP THROUGH TWO RECENT WORK POSTS -->
                         <?php $query = new WP_Query( array( 'cat' => 13, 'posts_per_page' => 2 ) ); ?>
                         <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
@@ -170,6 +170,28 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                 </div>
 
+                <div class="front-about">
+                    <h3>About</h3>
+                    <!-- INCLUDE ABOUT PAGE CONTENT -->
+                    <?php $query = new WP_Query( array( 'page_id' => 7 ) ); ?>
+                    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+
+                    <div class="about-content">
+
+                        <?php the_content(); ?>
+
+                    </div>
+
+                    <?php endwhile; ?>
+
+                    <?php else : ?>
+
+                        <?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+                    <?php endif; ?>
+                </div>
+
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
@@ -182,4 +204,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #index-wrapper -->
 
-<?php get_footer();
+<?php get_footer(); ?>
