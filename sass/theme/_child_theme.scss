@@ -19,20 +19,11 @@ body {
 }
 
 .wrapper {
-    padding: 30px 15px;
-    @media (max-width: 400px) {
-        padding: 30px 0;
-    }
-}
-
-.container-fluid {
-    max-width: 1140px;
+    padding: 30px 0;
 }
 
 .col-md {
-    @media (max-width: 400px) {
-        padding: 0;
-    }
+    padding: 0;
 }
 
 //
@@ -51,6 +42,12 @@ h2 a, .h2 a {
 h2 a:hover, .h2 a:hover {
     color: $gray-900;
     text-decoration: none;
+}
+
+h3{
+    font-size: 4.6875rem;
+    font-style: italic;
+    padding-bottom: 30px;
 }
 
 p {
@@ -92,7 +89,9 @@ a:hover {
     color: $gray-900;
 }
 
-.navbar-expand-md>.container, .navbar-expand-md>.container-fluid {
+.navbar-expand-md>.container-fluid {
+    max-width: 1110px;
+    margin: auto;
     @media (max-width: 767.98px) {
         padding-right: 15px;
         padding-left: 15px;
@@ -157,11 +156,11 @@ a:hover {
 //
 
 .logo-container {
-    padding-right: 30px;
-    width: 225px;
+    padding: 0 30px;
+    width: 255px;
     float: left;
     @media(max-width: 991px) {
-        width: 180px;
+        width: 210px;
     }
     @media (max-width: 767px) {
         width: 100%;
@@ -182,13 +181,27 @@ a:hover {
 // Home Page
 //
 
+// Container for logo and adjacent content
+
+.top {
+    max-width: 1140px;
+    margin: auto;
+}
+
 // Recent blog posts
 
 .front-blog {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 30px;
     @media (max-width: 991px) {
         flex-direction: column;
+    }
+    @media (max-width: 767px) {
+        padding-left: 30px;
+    }
+    @media (max-width: 400px) {
+        padding: 0;
     }
 }
 
@@ -221,7 +234,7 @@ a:hover {
     width: 100%;
 }
 
-.blog-thumb-container {
+.front-blog .blog-thumb-container {
     display: flex;
     height: 40vh;
     margin-bottom: 18px;
@@ -298,7 +311,7 @@ a:hover {
     font-size: 3.125rem;
     font-weight: 700;
     font-style: italic;
-    margin-bottom: 40px;
+    padding-bottom: 35px;
     @media (max-width: 767px) {
         text-align: center;
     }
@@ -310,4 +323,52 @@ a:hover {
 
 .front-more a:hover {
     text-decoration: none;
+}
+
+// Recent work
+
+.front-work {
+    background: $primary;
+    padding: 35px 30px 0 30px;
+    @media (max-width: 400px) {
+        padding: 0 15px;
+    }
+}
+
+.front-work-content {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.front-work article {
+    display: flex;
+    padding: 0 0 30px 0;
+    @media (max-width: 991px) {
+        flex-direction: column-reverse;
+        padding: 0 0 20px 0;
+    }
+}
+
+.front-work .work-info {
+    flex: 0 0 30%;
+    padding-right: 30px;
+    @media (max-width: 991px) {
+        flex: 0 0 100%;
+    }
+}
+
+.front-work .blog-thumb-container {
+    width: 100%;
+    @media (max-width: 991px) {
+        padding-bottom: 20px;
+    }
+}
+
+.front-work article img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.front-work .front-more {
+    margin-top: -10px;
 }

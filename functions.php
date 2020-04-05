@@ -40,7 +40,7 @@ function register_childtheme_menus() {
 
 add_action( 'init', 'register_childtheme_menus' );
 
-// Remove ellipses in post excerpt
+// Remove ellipses in post excerpt and read more link, "view more" if work category
 
 if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	/**
@@ -52,10 +52,14 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More',
+			$post_excerpt1 = $post_excerpt . ' <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More',
 			'understrap' ) . '</a></p>';
 		}
-		return $post_excerpt;
+		if ( in_category( 'Work' ) ) {
+			$post_excerpt1 = $post_excerpt . ' <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'View More',
+			'understrap' ) . '</a></p>';
+		}
+		return $post_excerpt1;
 	}
 }
 
