@@ -11354,14 +11354,33 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+@media (max-width: 991px) {
+  html {
+    font-size: 87.5%; } }
+
+@media (max-width: 767px) {
+  html {
+    font-size: 80%; } }
+
+@media (max-width: 576px) {
+  html {
+    font-size: 75%; } }
+
 body {
   -webkit-font-smoothing: antialiased; }
+
+.wrapper {
+  padding: 30px 15px; }
+  @media (max-width: 400px) {
+    .wrapper {
+      padding: 30px 0; } }
 
 .container-fluid {
   max-width: 1140px; }
 
-.wrapper {
-  padding: 30px 15px; }
+@media (max-width: 400px) {
+  .col-md {
+    padding: 0; } }
 
 h2, .h2 {
   margin-bottom: 18px;
@@ -11386,9 +11405,9 @@ a {
 a:hover {
   opacity: 0.8; }
 
-@media (max-width: 991px) {
-  html {
-    font-size: 87.5%; } }
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0.5rem 0; } }
 
 .nav-link {
   text-transform: uppercase;
@@ -11402,34 +11421,17 @@ a:hover {
 .navbar-expand-md .navbar-nav .nav-link:hover {
   color: #212529; }
 
-#social-menu .nav-link {
-  padding-bottom: 0.5rem; }
+@media (max-width: 767.98px) {
+  .navbar-expand-md > .container,
+  .navbar-expand-md > .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px; } }
 
 .menu-item:last-child .nav-link {
   padding-right: 0; }
 
 .menu-item:first-child .nav-link {
   padding-left: 0; }
-
-.fa-twitter {
-  font-size: 21px;
-  line-height: 16px; }
-
-.fa-envelope {
-  font-size: 19px;
-  line-height: 16px; }
-
-#social-menu.navbar-nav {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
-
-@media (max-width: 767.98px) {
-  .navbar-expand-md > .container,
-  .navbar-expand-md > .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px; } }
 
 .navbar-toggler {
   border: 0;
@@ -11452,36 +11454,79 @@ a:hover {
 #navbarNavDropdown.show {
   padding-bottom: 33px; }
 
+#social-menu.navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+#social-menu .nav-link {
+  padding-bottom: 0.5rem; }
+
+.fa-twitter {
+  font-size: 21px;
+  line-height: 16px; }
+
+.fa-envelope {
+  font-size: 19px;
+  line-height: 16px; }
+
 .logo-container {
   padding-right: 15px;
   padding-left: 15px; }
+  @media (max-width: 991px) {
+    .logo-container {
+      width: 180px; } }
+  @media (max-width: 767px) {
+    .logo-container {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 30px; } }
 
 .logo-container svg {
   width: 100%; }
-
-@media (max-width: 991px) {
-  .logo-container {
-    width: 150px; } }
+  @media (max-width: 767px) {
+    .logo-container svg {
+      width: 100px; } }
 
 .front-blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 991px) {
+    .front-blog {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .front-blog article {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%; }
+  @media (max-width: 991px) {
+    .front-blog article {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; } }
 
 .front-blog article:nth-child(odd) {
   padding-right: 15px; }
+  @media (max-width: 991px) {
+    .front-blog article:nth-child(odd) {
+      padding-right: 0;
+      padding-bottom: 10px; } }
 
 .front-blog article:nth-child(even) {
   padding-left: 15px; }
+  @media (max-width: 991px) {
+    .front-blog article:nth-child(even) {
+      padding-left: 0; } }
 
 .front-blog article img {
   -o-object-fit: cover;
-     object-fit: cover; }
+     object-fit: cover;
+  width: 100%; }
 
 .blog-thumb-container {
   display: -webkit-box;
@@ -11528,9 +11573,19 @@ a:hover {
 
 .front-blog .entry-content {
   padding: 0 0 15px 0; }
+  @media (max-width: 991px) {
+    .front-blog .entry-content {
+      padding: 0; } }
+
+@media (max-width: 400px) {
+  .front-blog .entry-header, .front-blog .entry-content {
+    padding: 0 15px; } }
 
 .front-blog .entry-footer {
   padding: 0 0 20px 0; }
+  @media (max-width: 400px) {
+    .front-blog .entry-footer {
+      padding: 0 15px 20px 15px; } }
 
 .front-more {
   font-family: "Playfair Display";
@@ -11538,6 +11593,9 @@ a:hover {
   font-weight: 700;
   font-style: italic;
   margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .front-more {
+      text-align: center; } }
 
 .front-more a {
   color: #212529; }
