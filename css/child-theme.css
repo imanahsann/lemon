@@ -11360,6 +11360,9 @@ body {
 .container-fluid {
   max-width: 1140px; }
 
+.wrapper {
+  padding: 30px 15px; }
+
 h2, .h2 {
   margin-bottom: 18px;
   line-height: 1.3; }
@@ -11383,8 +11386,9 @@ a {
 a:hover {
   opacity: 0.8; }
 
-.navbar {
-  padding: 0; }
+@media (max-width: 991px) {
+  html {
+    font-size: 87.5%; } }
 
 .nav-link {
   text-transform: uppercase;
@@ -11455,6 +11459,10 @@ a:hover {
 .logo-container svg {
   width: 100%; }
 
+@media (max-width: 991px) {
+  .logo-container {
+    width: 150px; } }
+
 .front-blog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11485,6 +11493,7 @@ a:hover {
 .btn-secondary {
   background: none;
   border: none;
+  border-radius: 0;
   color: #E8399E;
   text-transform: uppercase;
   font-weight: 600;
@@ -11527,7 +11536,8 @@ a:hover {
   font-family: "Playfair Display";
   font-size: 3.125rem;
   font-weight: 700;
-  font-style: italic; }
+  font-style: italic;
+  margin-bottom: 40px; }
 
 .front-more a {
   color: #212529; }

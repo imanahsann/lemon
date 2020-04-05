@@ -10,6 +10,10 @@ body {
     max-width: 1140px;
 }
 
+.wrapper {
+    padding: 30px 15px;
+}
+
 //
 // Type
 //
@@ -42,13 +46,17 @@ a:hover {
     opacity: 0.8;
 }
 
+// Responsive
+
+@media (max-width: 991px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
 //
 // Navigation Bar
 //
-
-.navbar {
-    padding: 0;
-}
 
 .nav-link {
     text-transform: uppercase;
@@ -87,7 +95,7 @@ a:hover {
     line-height: 16px;
 }
 
-// Mobile
+// Responsive
 
 #social-menu.navbar-nav {
     flex-direction: row;
@@ -140,6 +148,14 @@ a:hover {
     width: 100%;
 }
 
+// Responsive
+
+@media(max-width: 991px) {
+   .logo-container {
+        width: 150px;
+    }
+}
+
 //
 // Home Page
 //
@@ -179,6 +195,7 @@ a:hover {
 .btn-secondary {
     background: none;
     border: none;
+    border-radius: 0;
     color: $secondary;
     text-transform: uppercase;
     font-weight: 600;
@@ -232,6 +249,7 @@ a:hover {
     font-size: 3.125rem;
     font-weight: 700;
     font-style: italic;
+    margin-bottom: 40px;
 }
 
 .front-more a {

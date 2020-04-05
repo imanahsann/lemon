@@ -34,9 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 			</h2>
 
-		<?php if ( 'container' === $container ) : ?>
 			<div class="container-fluid">
-		<?php endif; ?>
 
 				<!-- Social Menu -->
 				<?php wp_nav_menu(
