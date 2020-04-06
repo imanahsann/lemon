@@ -11354,17 +11354,17 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
-@media (max-width: 991px) {
-  html {
-    font-size: 87.5%; } }
-
-@media (max-width: 767px) {
-  html {
-    font-size: 80%; } }
-
-@media (max-width: 576px) {
-  html {
-    font-size: 75%; } }
+html {
+  scroll-behavior: smooth; }
+  @media (max-width: 991px) {
+    html {
+      font-size: 87.5%; } }
+  @media (max-width: 767px) {
+    html {
+      font-size: 80%; } }
+  @media (max-width: 576px) {
+    html {
+      font-size: 75%; } }
 
 body {
   -webkit-font-smoothing: antialiased; }
@@ -11728,7 +11728,7 @@ blockquote p {
   margin-top: -10px; }
 
 .front-about {
-  padding: 35px 30px 0 30px;
+  padding: 35px 30px;
   max-width: 1140px;
   margin: auto; }
   @media (max-width: 400px) {
@@ -11745,7 +11745,7 @@ blockquote p {
 
 #wrapper-footer-full {
   padding: 10px 30px;
-  background: #212529;
+  background: #343a40;
   color: #e9ecef;
   text-align: center; }
 
@@ -11754,7 +11754,13 @@ blockquote p {
   line-height: 1rem;
   margin-top: 1rem; }
 
+#wrapper-footer-full a {
+  -webkit-transition: none;
+  transition: none;
+  color: #E8399E; }
+
 #wrapper-footer-full a:hover {
-  text-decoration: none; }
+  text-decoration: underline;
+  opacity: 1; }
 
 /*# sourceMappingURL=child-theme.css.map */

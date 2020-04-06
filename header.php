@@ -23,6 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
+<a name="top"></a>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
