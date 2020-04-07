@@ -3,7 +3,6 @@
 //
 
 html {
-    scroll-behavior: smooth;
     @media (max-width: 991px) {
         font-size: 87.5%;
     }
@@ -34,6 +33,12 @@ body {
 //
 // Type
 //
+
+h1, .h1 {
+    font-size: 3.75rem;
+    line-height: 1.5;
+    font-style: italic;
+}
 
 h2, .h2 {
   margin-bottom: 18px;
@@ -198,6 +203,33 @@ blockquote p {
     @media (max-width: 767px) {
         width: 100px;
     }
+}
+
+//
+// Footer
+//
+
+#wrapper-footer-full {
+    padding: 10px 30px;
+    background: $gray-800;
+    color: $gray-200;
+    text-align: center;
+}
+
+#wrapper-footer-full p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+}
+
+#wrapper-footer-full a {
+    transition: none;
+    color: $secondary;
+}
+
+#wrapper-footer-full a:hover {
+    text-decoration: underline;
+    opacity: 1;
 }
 
 //
@@ -455,28 +487,33 @@ blockquote p {
 }
 
 //
-// Footer
+// Pages
 //
 
-#wrapper-footer-full {
-    padding: 10px 30px;
-    background: $gray-800;
-    color: $gray-200;
-    text-align: center;
+.page .top {
+    display: flex;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
 }
 
-#wrapper-footer-full p {
-    font-size: 0.8rem;
-    line-height: 1rem;
-    margin-top: 1rem;
+.page .logo-container {
+    border-right: 1px solid $gray-900;
+    @media (max-width: 767px) {
+        border: 0;
+    }
 }
 
-#wrapper-footer-full a {
-    transition: none;
-    color: $secondary;
+.page-title {
+    padding-left: 30px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: -27px;
+    @media (max-width: 991px) {
+        margin-bottom: -24px;
+    }
 }
 
-#wrapper-footer-full a:hover {
-    text-decoration: underline;
-    opacity: 1;
+.page .wp-block-image:first-child img {
+    width: 100%;
 }

@@ -22,16 +22,18 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="top">
                     <!-- Logo -->
                     <div class="logo-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248">
-                        <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
-                            <g id="Subheading" transform="translate(740 128)">
-                            <text id="_9th" data-name="9th" transform="translate(0 97)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">9th</tspan></text>
-                            </g>
-                            <text id="_" data-name="&amp;" transform="translate(677 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">&amp;</tspan></text>
-                            <text id="Irv_ing" data-name="Irv
-                        ing" transform="translate(750 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">I</tspan><tspan y="0" letter-spacing="-0.075em">rv</tspan><tspan x="0" y="74">ing</tspan></text>
-                        </g>
-                        </svg>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248">
+                                <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
+                                    <g id="Subheading" transform="translate(740 128)">
+                                    <text id="_9th" data-name="9th" transform="translate(0 97)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">9th</tspan></text>
+                                    </g>
+                                    <text id="_" data-name="&amp;" transform="translate(677 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">&amp;</tspan></text>
+                                    <text id="Irv_ing" data-name="Irv
+                                ing" transform="translate(750 303)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">I</tspan><tspan y="0" letter-spacing="-0.075em">rv</tspan><tspan x="0" y="74">ing</tspan></text>
+                                </g>
+                            </svg>
+                        </a>
                     </div>
 
                     <div class="front-blog">
@@ -102,7 +104,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         <!-- BLOG LINK -->
                         <div class="front-more">
-                            <a href="">More Blog ></a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Blog ></a>
                         </div>
 
                     </div>
@@ -165,7 +167,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         <!-- WORK LINK -->
                         <div class="front-more">
-                            <a href="">More Work ></a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Work ></a>
                         </div>
                     </div>
                 </div>
