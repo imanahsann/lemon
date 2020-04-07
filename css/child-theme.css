@@ -11372,7 +11372,7 @@ body {
 .wrapper {
   padding: 30px 0; }
 
-#index-wrapper {
+#index-wrapper, #page-wrapper {
   padding-bottom: 0; }
 
 .col-md {
@@ -11758,7 +11758,7 @@ blockquote p {
   margin: auto; }
   @media (max-width: 400px) {
     .front-about {
-      padding: 25px 0 0 0; } }
+      padding: 25px 0 30px 0; } }
 
 .front-about h3 {
   text-align: center; }
@@ -11783,7 +11783,16 @@ blockquote p {
   border-right: 1px solid #212529; }
   @media (max-width: 767px) {
     .page .logo-container {
-      border: 0; } }
+      border: 0;
+      padding: 0 0 10px 0; } }
+
+.page-content {
+  padding: 30px 30px 35px;
+  max-width: 1140px;
+  margin: auto; }
+  @media (max-width: 767px) {
+    .page-content {
+      padding: 10px 0 30px 0; } }
 
 .page-title {
   padding-left: 30px;
@@ -11797,8 +11806,24 @@ blockquote p {
   @media (max-width: 991px) {
     .page-title {
       margin-bottom: -24px; } }
+  @media (max-width: 767px) {
+    .page-title {
+      margin-bottom: 0; } }
+  @media (max-width: 400px) {
+    .page-title {
+      padding-left: 15px; } }
 
 .page .wp-block-image:first-child img {
   width: 100%; }
+
+@media (max-width: 767px) {
+  .page-content figcaption, .page-content p {
+    padding-right: 30px;
+    padding-left: 30px; } }
+
+@media (max-width: 400px) {
+  .page-content figcaption, .page-content p {
+    padding-right: 15px;
+    padding-left: 15px; } }
 
 /*# sourceMappingURL=child-theme.css.map */

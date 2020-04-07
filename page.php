@@ -8,7 +8,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main front page" id="main">
+			<main class="site-main page" id="main">
 
                 <div class="top">
                     <!-- Logo -->
@@ -44,15 +44,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                 </div>
 
-                <div class="front-about">
+                <div class="page-content">
 
                         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-                        <div class="about-content">
-
-                            <?php the_content(); ?>
-
-                        </div>
+                        <?php the_content(); ?>
 
                         <?php endwhile; ?>
 
@@ -60,14 +56,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</main><!-- #main -->
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
-
-
 		</div><!-- .row -->
 
 	</div><!-- #content -->
 
-</div><!-- #index-wrapper -->
+</div><!-- wrapper -->
 
 <?php get_footer(); ?>
