@@ -49,17 +49,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-				<!-- Main Menu Mobile -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-				</button>
-
 				<!-- Main Menu -->
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
+						'container_class' => '',
+						'container_id'    => '',
 						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',

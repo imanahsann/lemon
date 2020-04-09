@@ -105,9 +105,17 @@ blockquote p {
     }
 }
 
+.navbar-expand-md .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
 .nav-link {
     text-transform: uppercase;
     line-height: 15px;
+    font-size: 14px;
     padding-bottom: 0.5625rem;
 }
 
@@ -153,17 +161,6 @@ blockquote p {
     font-size: 20px;
 }
 
-#main-menu.navbar-nav .nav-link {
-    @media (max-width: 767.98px) {
-        text-align: center;
-        padding: 10px 0;
-    }
-}
-
-#navbarNavDropdown.show {
-    padding-bottom: 33px;
-}
-
 #social-menu.navbar-nav {
     flex-direction: row;
 }
@@ -175,11 +172,17 @@ blockquote p {
 .fa-twitter {
     font-size: 21px;
     line-height: 16px;
+    @media (max-width: 400px) {
+        font-size: 16px;
+    }
 }
 
 .fa-envelope {
     font-size: 19px;
     line-height: 16px;
+    @media (max-width: 400px) {
+        font-size: 15px;
+    }
 }
 
 //
@@ -648,13 +651,4 @@ div.wpforms-container-full .wpforms-form label.wpforms-error {
 
 div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid, div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid, div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid {
     border: 1px solid $secondary;
-}
-
-
-
-.navbar-expand-md .navbar-nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
 }
