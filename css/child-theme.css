@@ -11382,6 +11382,9 @@ h1, .h1 {
   font-size: 3.75rem;
   line-height: 1.5;
   font-style: italic; }
+  @media (max-width: 400px) {
+    h1, .h1 {
+      font-size: 3rem; } }
 
 h2, .h2 {
   margin-bottom: 18px;
@@ -11753,12 +11756,12 @@ blockquote p {
   margin-top: -10px; }
 
 .front-about {
-  padding: 35px 30px;
+  padding: 35px 30px 14px 30px;
   max-width: 1140px;
   margin: auto; }
   @media (max-width: 400px) {
     .front-about {
-      padding: 25px 0 30px 0; } }
+      padding: 25px 0 5px 0; } }
 
 .front-about h3 {
   text-align: center; }
@@ -11787,12 +11790,15 @@ blockquote p {
       padding: 0 0 10px 0; } }
 
 .page-content {
-  padding: 30px 30px 35px;
+  padding: 30px 30px 14px 35px;
   max-width: 1140px;
   margin: auto; }
   @media (max-width: 767px) {
     .page-content {
-      padding: 10px 0 30px 0; } }
+      padding: 0px 0 14px 0; } }
+  @media (max-width: 400px) {
+    .page-content {
+      padding: 0px 0 5px 0; } }
 
 .page-title {
   padding-left: 30px;

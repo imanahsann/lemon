@@ -46,11 +46,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                 <div class="page-content">
 
-                        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-                        <?php the_content(); ?>
+                    <?php the_content(); ?>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
                 </div>
 

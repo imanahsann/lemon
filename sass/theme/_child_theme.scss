@@ -38,6 +38,9 @@ h1, .h1 {
     font-size: 3.75rem;
     line-height: 1.5;
     font-style: italic;
+    @media (max-width: 400px) {
+        font-size: 3rem;
+    }
 }
 
 h2, .h2 {
@@ -467,11 +470,11 @@ blockquote p {
 // About
 
 .front-about {
-    padding: 35px 30px;
+    padding: 35px 30px 14px 30px;
     max-width: 1140px;
     margin: auto;
     @media (max-width: 400px) {
-        padding: 25px 0 30px 0;
+        padding: 25px 0 5px 0;
     }
 }
 
@@ -506,11 +509,14 @@ blockquote p {
 }
 
 .page-content {
-    padding: 30px 30px 35px;
+    padding: 30px 30px 14px 35px;
     max-width: 1140px;
     margin: auto;
     @media (max-width: 767px) {
-        padding: 10px 0 30px 0;
+        padding: 0px 0 14px 0;
+    }
+    @media (max-width: 400px) {
+        padding: 0px 0 5px 0;
     }
 }
 
@@ -543,4 +549,12 @@ blockquote p {
         padding-right: 15px;
         padding-left: 15px;
     }
+}
+
+//
+// Contact
+//
+
+.wpforms-container {
+
 }
