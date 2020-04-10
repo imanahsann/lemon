@@ -38,6 +38,7 @@ h1, .h1 {
     font-size: 3.75rem;
     line-height: 1.5;
     font-style: italic;
+    letter-spacing: -2px;
     @media (max-width: 400px) {
         font-size: 3rem;
     }
@@ -193,14 +194,17 @@ blockquote p {
     padding: 0 30px;
     width: 255px;
     float: left;
+    flex: 0 0 255px;
     @media(max-width: 991px) {
         width: 210px;
+        flex: 0 0 210px;
     }
     @media (max-width: 767px) {
         width: 100%;
         text-align: center;
         padding: 0 0 30px 0;
         float: none;
+        flex: none;
     }
 }
 
@@ -397,7 +401,7 @@ blockquote p {
 }
 
 .front-work-content {
-    max-width: 1140px;
+    max-width: 1080px;
     margin: auto;
 }
 
@@ -512,7 +516,7 @@ blockquote p {
 }
 
 .page-content {
-    padding: 30px 30px 14px 35px;
+    padding: 35px 30px 14px 30px;
     max-width: 1140px;
     margin: auto;
     @media (max-width: 767px) {
@@ -558,31 +562,31 @@ blockquote p {
 // Contact
 //
 
-.wp-block-group__inner-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
+// .wp-block-group__inner-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+// }
 
-.wp-block-group__inner-container div, .wp-block-group__inner-container p {
-    flex: 0 0 50%;
-    @media (max-width: 767px) {
-        flex: 0 0 100%;
-    }
-}
+// .wp-block-group__inner-container div, .wp-block-group__inner-container p {
+//     flex: 0 0 50%;
+//     @media (max-width: 767px) {
+//         flex: 0 0 100%;
+//     }
+// }
 
-.wp-block-group__inner-container p {
-    padding-right: 30px;
-    @media (max-width: 767px) {
-        padding-right: 30px;
-    }
-    @media (max-width: 400px) {
-        padding-right: 15px;
-    }
-}
+// .wp-block-group__inner-container p {
+//     padding-right: 30px;
+//     @media (max-width: 767px) {
+//         padding-right: 30px;
+//     }
+//     @media (max-width: 400px) {
+//         padding-right: 15px;
+//     }
+// }
 
 #wpforms-54 {
-    padding: 30px 0;
+    padding:0 0 15px;
     @media (max-width: 767px) {
         padding: 0 30px 15px;
     }
@@ -656,3 +660,14 @@ div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error, div
 //
 // Category pages
 //
+
+
+//
+// Singly post page
+//
+
+.single .wp-post-image {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 30px;
+}
