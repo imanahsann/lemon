@@ -206,4 +206,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #index-wrapper -->
 
+</div>
+
 <?php get_footer(); ?>

@@ -42,16 +42,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <div class="page-title">
                             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                         </div>
-                        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+
                     </div>
 
                 </div>
 
                 <div class="page-content">
 
-                    <?php the_content(); ?>
+<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                        <?php the_content(); ?>
 
-                    <?php endwhile; ?>
+                        <?php endwhile; ?>
 
                 </div>
 

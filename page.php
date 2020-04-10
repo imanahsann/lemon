@@ -17,9 +17,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main page" id="main">
+			<main class="site-main page-main" id="main">
 
-                <div class="top">
+                <div class="location">
                     <!-- Logo -->
                     <div class="logo-container">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <?php while ( have_posts() ) : the_post(); ?>
 
                     <div class="page-title">
-                        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                        <?php the_title( '<h1 class="entry-title">/', '</h1>' ); ?>
                     </div>
 
                 </div>
@@ -61,5 +61,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 
 </div><!-- wrapper -->
+</div>
 
 <?php get_footer(); ?>
