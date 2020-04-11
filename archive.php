@@ -8,7 +8,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="page-wrapper archive-wrapper">
+<div class="wrapper" id="archive-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -17,9 +17,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main page archive" id="main">
+			<main class="site-main archive-main" id="main">
 
-                <div class="top">
+                <div class="location">
                     <!-- Logo -->
                     <div class="logo-container">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -36,69 +36,69 @@ $container = get_theme_mod( 'understrap_container_type' );
                         </a>
                     </div>
 
-                    <div class="page-title">
+                    <div class="archive-title">
                         <?php
-						the_archive_title( '<h1>', '</h1>' );
+						the_archive_title( '<h1>/', '</h1>' );
 						?>
                     </div>
 
                 </div>
 
-                <div class="page-content front-blog">
+                <div class="archive-content">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<!-- POST -->
-                            <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                                <div class="blog-thumb-container">
-                                    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-                                </div>
+                            <div class="blog-thumb-container">
+                                <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                            </div>
 
-                                <header class="entry-header">
-
-                                    <?php
-                                    the_title(
-                                        sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-                                        '</a></h2>'
-                                    );
-                                    ?>
-
-                                </header><!-- .entry-header -->
-
-                                <div class="entry-content">
-
-                                    <?php the_excerpt(); ?>
-
-                                    <?php
-                                    wp_link_pages(
-                                        array(
-                                            'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-                                            'after'  => '</div>',
-                                        )
-                                    );
-
-                                    ?>
-
-
-                                </div><!-- .entry-content -->
-
-                                <footer class="entry-footer">
+                            <header class="entry-header">
 
                                 <?php
+                                the_title(
+                                    sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+                                    '</a></h2>'
+                                );
+                                ?>
 
-                                    $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
+                            </header><!-- .entry-header -->
 
-                                    if ( $tags_list ) {
-                                        /* translators: %s: Tags of current post */
-                                        printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
-                                    }
+                            <div class="entry-content">
+
+                                <?php the_excerpt(); ?>
+
+                                <?php
+                                wp_link_pages(
+                                    array(
+                                        'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                                        'after'  => '</div>',
+                                    )
+                                );
 
                                 ?>
 
-                                </footer><!-- .entry-footer -->
 
-                            </article><!-- #post-## -->
+                            </div><!-- .entry-content -->
+
+                            <footer class="entry-footer">
+
+                            <?php
+
+                                $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
+
+                                if ( $tags_list ) {
+                                    /* translators: %s: Tags of current post */
+                                    printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+                                }
+
+                            ?>
+
+                            </footer><!-- .entry-footer -->
+
+                        </article><!-- #post-## -->
 
                     <?php endwhile; ?>
 

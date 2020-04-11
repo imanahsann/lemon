@@ -103,7 +103,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php endif; ?>
 
                         <!-- BLOG LINK -->
-                        <div class="front-more">
+                        <div class="more">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Blog ></a>
                         </div>
 
@@ -166,7 +166,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php endif; ?>
 
                         <!-- WORK LINK -->
-                        <div class="front-more">
+                        <div class="more">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Work ></a>
                         </div>
                     </div>
