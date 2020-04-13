@@ -11387,9 +11387,7 @@ body {
   padding: 30px 0; }
 
 #index-wrapper, #page-wrapper, #archive-wrapper {
-  padding-bottom: 0; }
-
-#page-wrapper {
+  padding-bottom: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
@@ -11838,6 +11836,21 @@ blockquote p {
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0; }
+  @media (max-width: 991px) {
+    .page .logo-container, .category .logo-container {
+      width: 150px;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 150px;
+              flex: 0 0 150px; } }
+  @media (max-width: 767px) {
+    .page .logo-container, .category .logo-container {
+      width: 100%;
+      text-align: center;
+      padding: 0 0 30px 0;
+      float: none;
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; } }
 
 .page-title, .archive-title {
   padding-left: 0px;
