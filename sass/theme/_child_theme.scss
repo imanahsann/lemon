@@ -272,16 +272,15 @@ blockquote p {
 .archive-content {
     display: flex;
     flex-wrap: wrap;
-    padding-right: 30px;
     @media (max-width: 991px) {
         flex-direction: column;
     }
-    @media (max-width: 767px) {
-        padding-left: 30px;
-    }
-    @media (max-width: 400px) {
-        padding: 0;
-    }
+    // @media (max-width: 767px) {
+    //     padding-left: 30px;
+    // }
+    // @media (max-width: 400px) {
+    //     padding: 0;
+    // }
 }
 
 .archive-content article {
@@ -554,10 +553,10 @@ blockquote p {
 }
 
 
-.page-content, .archive-content {
-    padding: 0 30px 14px 0px;
-    flex: 1;
-}
+// .page-content, .archive-content {
+//     padding: 0 30px 14px 0px;
+//     flex: 1;
+// }
 
 .page .wp-block-image:first-child img {
     width: 100%;

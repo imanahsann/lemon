@@ -11560,20 +11560,13 @@ blockquote p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-right: 30px; }
+      flex-wrap: wrap; }
   @media (max-width: 991px) {
     .archive-content {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-  @media (max-width: 767px) {
-    .archive-content {
-      padding-left: 30px; } }
-  @media (max-width: 400px) {
-    .archive-content {
-      padding: 0; } }
 
 .archive-content article {
   -webkit-box-flex: 0;
@@ -11825,12 +11818,6 @@ blockquote p {
   text-transform: lowercase;
   font-size: 3.25rem;
   text-align: right; }
-
-.page-content, .archive-content {
-  padding: 0 30px 14px 0px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
 
 .page .wp-block-image:first-child img {
   width: 100%; }
