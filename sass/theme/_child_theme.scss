@@ -31,7 +31,7 @@ body {
     justify-content: space-between;
 }
 
-#page-wrapper, #archive-wrapper {
+#page-wrapper, #archive-wrapper, .page-main {
     flex: 1;
 }
 
@@ -207,14 +207,17 @@ blockquote p {
         width: 180px;
     }
     @media (max-width: 767px) {
-        width: 130px;
-        margin: auto;
+        width: 100%;
         padding-bottom: 30px;
+        text-align: center;
     }
 }
 
 .logo-container svg {
     width: 100%;
+    @media (max-width: 767px) {
+        width: 130px;
+    }
 }
 
 .logo-container a, .logo-container a:hover, .logo-container a:active, .logo-container a:visited, .logo-container a:focus {
@@ -470,61 +473,38 @@ blockquote p {
 // Pages
 //
 
-.location {
-    flex: 0 0 255px;
-    padding: 0 30px 30px;
-    display: flex;
-    flex-direction: column;
-    @media(max-width: 991px) {
-        width: 150px;
-        flex: 0 0 150px;
-    }
+.page .logo-container {
     @media (max-width: 767px) {
-        width: 100%;
-        text-align: center;
-        padding: 0 0 30px 0;
-        float: none;
-        flex: none;
+        padding-bottom: 0;
     }
-}
-
-.page .logo-container, .category .logo-container {
-    padding: 0;
-    width: 195px;
-    float: none;
-    flex: 0;
-}
-
-.page-title, .archive-title {
-    padding-left: 0px;
-    padding-right: 0px;
 }
 
 .page-title h1, .archive-title h1 {
     text-transform: lowercase;
     font-size: 3.25rem;
     text-align: right;
+    @media (max-width: 767px) {
+        text-align: left;
+    }
+    @media (max-width: 500px) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
-
-
-// .page-content, .archive-content {
-//     padding: 0 30px 14px 0px;
-//     flex: 1;
-// }
 
 .page .wp-block-image:first-child img {
     width: 100%;
 }
 
 .page-content figcaption, .page-content p {
-    @media (max-width: 767px) {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
     @media (max-width: 500px) {
         padding-right: 15px;
         padding-left: 15px;
     }
+}
+
+.page-content p:last-child {
+    margin-bottom: 0;
 }
 
 //
@@ -540,6 +520,10 @@ div.wpforms-container-full {
     margin-bottom: 0;
     background-color: $lightgray;
     padding: 30px;
+    @media (max-width: 500px) {
+        padding: 0 15px;
+        background: none;
+    }
 }
 
 div.wpforms-container-full .wpforms-form .wpforms-field {
@@ -561,7 +545,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field {
 
 div.wpforms-container-full .wpforms-form .wpforms-field-label {
     font-weight: 300;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea, div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
@@ -571,7 +555,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 }
 
 div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 div.wpforms-container-full .wpforms-form input[type=date]:focus, div.wpforms-container-full .wpforms-form input[type=datetime]:focus, div.wpforms-container-full .wpforms-form input[type=datetime-local]:focus, div.wpforms-container-full .wpforms-form input[type=email]:focus, div.wpforms-container-full .wpforms-form input[type=month]:focus, div.wpforms-container-full .wpforms-form input[type=number]:focus, div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range]:focus, div.wpforms-container-full .wpforms-form input[type=search]:focus, div.wpforms-container-full .wpforms-form input[type=tel]:focus, div.wpforms-container-full .wpforms-form input[type=text]:focus, div.wpforms-container-full .wpforms-form input[type=time]:focus, div.wpforms-container-full .wpforms-form input[type=url]:focus, div.wpforms-container-full .wpforms-form input[type=week]:focus, div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea, div.wpforms-container-full .wpforms-form input[type=submit]:focus, div.wpforms-container-full .wpforms-form button[type=submit]:focus, div.wpforms-container-full .wpforms-form input:focus, div.wpforms-container-full .wpforms-form textarea:focus, div.wpforms-container-full .wpforms-form select:focus {
@@ -590,6 +574,10 @@ div.wpforms-container-full .wpforms-form label.wpforms-error {
 
 div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid, div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid, div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid {
     border: 1px solid $secondary;
+}
+
+div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea {
+    font-size: 1rem;
 }
 
 //

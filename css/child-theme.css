@@ -11387,7 +11387,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-#page-wrapper, #archive-wrapper {
+#page-wrapper, #archive-wrapper, .page-main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
@@ -11529,12 +11529,15 @@ blockquote p {
       width: 180px; } }
   @media (max-width: 767px) {
     .logo-container {
-      width: 130px;
-      margin: auto;
-      padding-bottom: 30px; } }
+      width: 100%;
+      padding-bottom: 30px;
+      text-align: center; } }
 
 .logo-container svg {
   width: 100%; }
+  @media (max-width: 767px) {
+    .logo-container svg {
+      width: 130px; } }
 
 .logo-container a, .logo-container a:hover, .logo-container a:active, .logo-container a:visited, .logo-container a:focus {
   text-decoration: none; }
@@ -11757,63 +11760,32 @@ blockquote p {
 .home-about p:last-child {
   margin-bottom: 0; }
 
-.location {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 255px;
-          flex: 0 0 255px;
-  padding: 0 30px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  @media (max-width: 991px) {
-    .location {
-      width: 150px;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 150px;
-              flex: 0 0 150px; } }
-  @media (max-width: 767px) {
-    .location {
-      width: 100%;
-      text-align: center;
-      padding: 0 0 30px 0;
-      float: none;
-      -webkit-box-flex: 0;
-          -ms-flex: none;
-              flex: none; } }
-
-.page .logo-container, .category .logo-container {
-  padding: 0;
-  width: 195px;
-  float: none;
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0; }
-
-.page-title, .archive-title {
-  padding-left: 0px;
-  padding-right: 0px; }
+@media (max-width: 767px) {
+  .page .logo-container {
+    padding-bottom: 0; } }
 
 .page-title h1, .archive-title h1 {
   text-transform: lowercase;
   font-size: 3.25rem;
   text-align: right; }
+  @media (max-width: 767px) {
+    .page-title h1, .archive-title h1 {
+      text-align: left; } }
+  @media (max-width: 500px) {
+    .page-title h1, .archive-title h1 {
+      padding-right: 15px;
+      padding-left: 15px; } }
 
 .page .wp-block-image:first-child img {
   width: 100%; }
-
-@media (max-width: 767px) {
-  .page-content figcaption, .page-content p {
-    padding-right: 30px;
-    padding-left: 30px; } }
 
 @media (max-width: 500px) {
   .page-content figcaption, .page-content p {
     padding-right: 15px;
     padding-left: 15px; } }
+
+.page-content p:last-child {
+  margin-bottom: 0; }
 
 .wpforms-field-container {
   display: -webkit-box;
@@ -11826,6 +11798,10 @@ div.wpforms-container-full {
   margin-bottom: 0;
   background-color: #FAFAFA;
   padding: 30px; }
+  @media (max-width: 500px) {
+    div.wpforms-container-full {
+      padding: 0 15px;
+      background: none; } }
 
 div.wpforms-container-full .wpforms-form .wpforms-field {
   -webkit-box-flex: 1;
@@ -11846,7 +11822,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field {
 
 div.wpforms-container-full .wpforms-form .wpforms-field-label {
   font-weight: 300;
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 
 div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea, div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
   border: 1px solid #343a40;
@@ -11854,7 +11830,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
   background: #FAFAFA; }
 
 div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 
 div.wpforms-container-full .wpforms-form input[type=date]:focus, div.wpforms-container-full .wpforms-form input[type=datetime]:focus, div.wpforms-container-full .wpforms-form input[type=datetime-local]:focus, div.wpforms-container-full .wpforms-form input[type=email]:focus, div.wpforms-container-full .wpforms-form input[type=month]:focus, div.wpforms-container-full .wpforms-form input[type=number]:focus, div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range]:focus, div.wpforms-container-full .wpforms-form input[type=search]:focus, div.wpforms-container-full .wpforms-form input[type=tel]:focus, div.wpforms-container-full .wpforms-form input[type=text]:focus, div.wpforms-container-full .wpforms-form input[type=time]:focus, div.wpforms-container-full .wpforms-form input[type=url]:focus, div.wpforms-container-full .wpforms-form input[type=week]:focus, div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea, div.wpforms-container-full .wpforms-form input[type=submit]:focus, div.wpforms-container-full .wpforms-form button[type=submit]:focus, div.wpforms-container-full .wpforms-form input:focus, div.wpforms-container-full .wpforms-form textarea:focus, div.wpforms-container-full .wpforms-form select:focus {
   border: 1px solid #343a40; }
@@ -11869,6 +11845,9 @@ div.wpforms-container-full .wpforms-form label.wpforms-error {
 
 div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid, div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid, div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error, div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid {
   border: 1px solid #E8399E; }
+
+div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea {
+  font-size: 1rem; }
 
 .single .wp-post-image {
   width: 100%;
