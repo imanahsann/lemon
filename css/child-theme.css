@@ -11354,6 +11354,10 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden; }
+
 @media (max-width: 991px) {
   html {
     font-size: 87.5%; } }
@@ -11392,17 +11396,22 @@ body {
   max-width: 1140px;
   padding-right: 30px;
   padding-left: 30px; }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     .container-fluid, .navbar-expand-md > .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 0;
+      padding-left: 0; } }
+
+@media (max-width: 500px) {
+  .navbar-expand-md > .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px; } }
 
 h1, .h1 {
   font-size: 3.75rem;
   line-height: 1.5;
   font-style: italic;
   letter-spacing: -2px; }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     h1, .h1 {
       font-size: 3rem; } }
 
@@ -11502,14 +11511,14 @@ blockquote p {
 .fa-twitter {
   font-size: 21px;
   line-height: 16px; }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     .fa-twitter {
       font-size: 16px; } }
 
 .fa-envelope {
   font-size: 19px;
   line-height: 16px; }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     .fa-envelope {
       font-size: 15px; } }
 
@@ -11526,6 +11535,9 @@ blockquote p {
 
 .logo-container svg {
   width: 100%; }
+
+.logo-container a, .logo-container a:hover, .logo-container a:active, .logo-container a:visited, .logo-container a:focus {
+  text-decoration: none; }
 
 #wrapper-footer-full {
   background: #343a40;
@@ -11563,7 +11575,8 @@ blockquote p {
     .archive-content article {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
-              flex: 0 0 100%; } }
+              flex: 0 0 100%;
+      padding-bottom: calc(40px - 1rem); } }
 
 .archive-content article:nth-child(odd) {
   padding-right: 15px; }
@@ -11614,7 +11627,7 @@ blockquote p {
   color: #fff;
   background-color: #E8399E;
   padding: 3px 6px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   letter-spacing: 0.09px;
   margin-right: 5px;
   margin-bottom: 1rem;
@@ -11623,8 +11636,8 @@ blockquote p {
 .tags-links a:hover {
   text-decoration: none; }
 
-@media (max-width: 400px) {
-  .entry-header, .entry-content {
+@media (max-width: 500px) {
+  .entry-header, .entry-content, .entry-footer {
     padding: 0 15px; } }
 
 .more {
@@ -11635,7 +11648,8 @@ blockquote p {
   padding-bottom: 5px; }
   @media (max-width: 767px) {
     .more {
-      text-align: center; } }
+      text-align: center;
+      margin: auto; } }
 
 .more a {
   color: #212529; }
@@ -11648,55 +11662,55 @@ blockquote p {
 
 .home-work .content-area {
   padding: 5px 0 0 0; }
-  @media (max-width: 400px) {
-    .home-work .content-area {
-      padding: 25px 0 0 0; } }
 
-@media (max-width: 400px) {
-  .recent-work h3, .recent-work .work-info {
+@media (max-width: 500px) {
+  .home-work h3 {
     padding-right: 15px;
     padding-left: 15px; } }
 
-.recent-work article {
+.home-work article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 0 40px 0; }
   @media (max-width: 767px) {
-    .recent-work article {
+    .home-work article {
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
           -ms-flex-direction: column-reverse;
               flex-direction: column-reverse;
       padding: 0 0 30px 0; } }
 
-.recent-work .work-info {
+.home-work .work-info {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
   padding-right: 30px; }
   @media (max-width: 991px) {
-    .recent-work .work-info {
+    .home-work .work-info {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 40%;
               flex: 0 0 40%; } }
   @media (max-width: 767px) {
-    .recent-work .work-info {
+    .home-work .work-info {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      padding-right: 0; } }
   @media (max-width: 500px) {
-    .recent-work .work-info {
+    .home-work .work-info {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      padding-right: 15px;
+      padding-left: 15px; } }
 
 @media (max-width: 767px) {
-  .recent-work .entry-header {
+  .home-work .entry-header {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -11704,42 +11718,38 @@ blockquote p {
     padding-right: 15px; } }
 
 @media (max-width: 500px) {
-  .recent-work .entry-header {
+  .home-work .entry-header {
     text-align: left;
-    padding-right: 0; } }
+    padding: 0; } }
 
 @media (max-width: 767px) {
-  .recent-work .entry-content {
+  .home-work .entry-content {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     padding-left: 15px; } }
 
 @media (max-width: 500px) {
-  .recent-work .entry-content {
+  .home-work .entry-content {
     padding-left: 0; } }
 
-.recent-work .blog-thumb-container {
+.home-work .blog-thumb-container {
   width: 100%; }
   @media (max-width: 767px) {
-    .recent-work .blog-thumb-container {
+    .home-work .blog-thumb-container {
       padding-bottom: 20px; } }
 
-.recent-work article img {
+.home-work article img {
   width: 100%;
   max-width: 100%; }
 
-.recent-work .more {
+.home-work .more {
   margin-top: -10px; }
-
-@media (max-width: 400px) {
-  .home-about .content-area {
-    padding: 25px 0 5px 0; } }
 
 .home-about h3 {
   text-align: center; }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .home-about figcaption, .home-about p {
     padding-right: 15px;
     padding-left: 15px; } }
@@ -11800,7 +11810,7 @@ blockquote p {
     padding-right: 30px;
     padding-left: 30px; } }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .page-content figcaption, .page-content p {
     padding-right: 15px;
     padding-left: 15px; } }

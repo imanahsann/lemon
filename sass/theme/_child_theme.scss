@@ -2,6 +2,11 @@
 // Global
 //
 
+html, body {
+    width:100%;
+    overflow-x:hidden;
+}
+
 html {
     @media (max-width: 991px) {
         font-size: 87.5%;
@@ -34,7 +39,14 @@ body {
     max-width: 1140px;
     padding-right: 30px;
     padding-left: 30px;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.navbar-expand-md>.container-fluid {
+    @media (max-width: 500px) {
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -49,7 +61,7 @@ h1, .h1 {
     line-height: 1.5;
     font-style: italic;
     letter-spacing: -2px;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         font-size: 3rem;
     }
 }
@@ -172,7 +184,7 @@ blockquote p {
 .fa-twitter {
     font-size: 21px;
     line-height: 16px;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         font-size: 16px;
     }
 }
@@ -180,7 +192,7 @@ blockquote p {
 .fa-envelope {
     font-size: 19px;
     line-height: 16px;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         font-size: 15px;
     }
 }
@@ -203,6 +215,10 @@ blockquote p {
 
 .logo-container svg {
     width: 100%;
+}
+
+.logo-container a, .logo-container a:hover, .logo-container a:active, .logo-container a:visited, .logo-container a:focus {
+    text-decoration: none;
 }
 
 //
@@ -246,6 +262,7 @@ blockquote p {
     padding-bottom: calc(30px - 1rem);
     @media (max-width: 991px) {
         flex: 0 0 100%;
+        padding-bottom: calc(40px - 1rem);
     }
 }
 
@@ -307,7 +324,7 @@ blockquote p {
     color: $white;
     background-color: $secondary;
     padding: 3px 6px;
-    font-size: 1rem;
+    font-size: 0.875rem;
     letter-spacing: 0.09px;
     margin-right: 5px;
     margin-bottom: 1rem;
@@ -318,8 +335,8 @@ blockquote p {
     text-decoration: none;
 }
 
-.entry-header, .entry-content {
-    @media (max-width: 400px) {
+.entry-header, .entry-content, .entry-footer {
+    @media (max-width: 500px) {
         padding: 0 15px;
     }
 }
@@ -338,6 +355,7 @@ blockquote p {
     padding-bottom: 5px;
     @media (max-width: 767px) {
         text-align: center;
+        margin: auto;
     }
 }
 
@@ -357,19 +375,16 @@ blockquote p {
 
 .home-work .content-area {
     padding: 5px 0 0 0;
-    @media (max-width: 400px) {
-        padding: 25px 0 0 0;
-    }
 }
 
-.recent-work h3, .recent-work .work-info {
-    @media (max-width: 400px) {
+.home-work h3 {
+    @media (max-width: 500px) {
         padding-right: 15px;
         padding-left: 15px;
     }
 }
 
-.recent-work article {
+.home-work article {
     display: flex;
     padding: 0 0 40px 0;
     @media (max-width: 767px) {
@@ -378,7 +393,7 @@ blockquote p {
     }
 }
 
-.recent-work .work-info {
+.home-work .work-info {
     flex: 0 0 30%;
     padding-right: 30px;
     @media (max-width: 991px) {
@@ -387,13 +402,16 @@ blockquote p {
     @media (max-width: 767px) {
         flex: 0 0 100%;
         display: flex;
+        padding-right: 0;
     }
     @media (max-width: 500px) {
         flex-direction: column;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
 
-.recent-work .entry-header {
+.home-work .entry-header {
     @media (max-width: 767px) {
         flex: 0 0 50%;
         text-align: right;
@@ -401,50 +419,44 @@ blockquote p {
     }
     @media (max-width: 500px) {
         text-align: left;
-        padding-right: 0;
+        padding: 0;
     }
 }
 
-.recent-work .entry-content {
+.home-work .entry-content {
     @media (max-width: 767px) {
         flex: 0 0 50%;
         padding-left: 15px;
     }
     @media (max-width: 500px) {
-        padding-left: 0;;
+        padding-left: 0;
     }
 }
 
-.recent-work .blog-thumb-container {
+.home-work .blog-thumb-container {
     width: 100%;
     @media (max-width: 767px) {
         padding-bottom: 20px;
     }
 }
 
-.recent-work article img {
+.home-work article img {
     width: 100%;
     max-width: 100%;
 }
 
-.recent-work .more {
+.home-work .more {
     margin-top: -10px;
 }
 
 // About
-
-.home-about .content-area {;
-    @media (max-width: 400px) {
-        padding: 25px 0 5px 0;
-    }
-}
 
 .home-about h3 {
     text-align: center;
 }
 
 .home-about figcaption, .home-about p {
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -509,7 +521,7 @@ blockquote p {
         padding-right: 30px;
         padding-left: 30px;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         padding-right: 15px;
         padding-left: 15px;
     }
