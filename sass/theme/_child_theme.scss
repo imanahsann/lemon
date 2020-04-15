@@ -26,15 +26,6 @@ body {
     justify-content: space-between;
 }
 
-// .site-main {
-//     display: flex;
-//     max-width: 1140px;
-//     margin: auto;
-//     @media (max-width: 767px) {
-//         flex-direction: column;
-//     }
-// }
-
 .wrapper {
     padding: 30px 0;
 }
@@ -43,7 +34,7 @@ body {
     flex: 1;
 }
 
-.container-fluid {
+.container-fluid, .navbar-expand-md>.container-fluid {
     max-width: 1140px;
     padding-right: 30px;
     padding-left: 30px;
@@ -89,7 +80,7 @@ h3{
 
 p {
     letter-spacing: 0.3px;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 a {
@@ -150,15 +141,6 @@ blockquote p {
     color: $gray-900;
 }
 
-.navbar-expand-md>.container-fluid {
-    max-width: 1110px;
-    margin: auto;
-    @media (max-width: 767.98px) {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-}
-
 .menu-item:last-child .nav-link {
     padding-right: 0;
 }
@@ -212,12 +194,14 @@ blockquote p {
 //
 
 .logo-container {
-    width: 195px;
+    width: 225px;
     @media(max-width: 991px) {
-        width: 150px;
+        width: 180px;
     }
     @media (max-width: 767px) {
-        width: 100px;
+        width: 130px;
+        margin: auto;
+        padding-bottom: 30px;
     }
 }
 
@@ -252,35 +236,12 @@ blockquote p {
 }
 
 //
-// Home Page
+// Lists of posts
 //
-
-// .home .site-main {
-//     display: block;
-//     max-width: none;
-// }
-
-// Container for logo and adjacent content
-
-// .top {
-//     max-width: 1140px;
-//     margin: auto;
-// }
-
-// Recent blog posts
 
 .archive-content {
     display: flex;
     flex-wrap: wrap;
-    @media (max-width: 991px) {
-        flex-direction: column;
-    }
-    // @media (max-width: 767px) {
-    //     padding-left: 30px;
-    // }
-    // @media (max-width: 400px) {
-    //     padding: 0;
-    // }
 }
 
 .archive-content article {
@@ -305,7 +266,7 @@ blockquote p {
     }
 }
 
-// Recent blog post featured image
+// Featured image
 
 .archive-content article img {
     object-fit: cover;
@@ -327,7 +288,6 @@ blockquote p {
     color: $secondary;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.125rem;
     letter-spacing: 0.09px;
     padding: 0;
     transition: none;
@@ -339,7 +299,7 @@ blockquote p {
     color: $secondary;
 }
 
-// Recent blog post tags
+// Tags
 
 .tags-links {
     padding: 0;
@@ -349,13 +309,12 @@ blockquote p {
     display: inline-block;
     color: $white;
     background-color: $secondary;
-    padding: 5px 10px;
+    padding: 3px 6px;
     font-size: 1rem;
     letter-spacing: 0.09px;
     margin-right: 5px;
     margin-bottom: 10px;
     text-transform: lowercase;
-    font-weight: 600;
 }
 
 .tags-links a:hover {
@@ -382,7 +341,11 @@ blockquote p {
     }
 }
 
-// Read/view more links
+//
+// Home page
+//
+
+// More headings
 
 .more {
     font-family: $headings-font-family;
@@ -415,11 +378,6 @@ blockquote p {
         padding: 25px 0 0 0;
     }
 }
-
-// .recent-work-content {
-//     max-width: 1080px;
-//     margin: auto;
-// }
 
 .recent-work h3, .recent-work .work-info {
     @media (max-width: 400px) {
@@ -494,8 +452,6 @@ blockquote p {
 
 .home-about {
     padding: 35px 0 14px 0;
-    // max-width: 1140px;
-    // margin: auto;
     @media (max-width: 400px) {
         padding: 25px 0 5px 0;
     }

@@ -11391,12 +11391,12 @@ body {
       -ms-flex: 1;
           flex: 1; }
 
-.container-fluid {
+.container-fluid, .navbar-expand-md > .container-fluid {
   max-width: 1140px;
   padding-right: 30px;
   padding-left: 30px; }
   @media (max-width: 400px) {
-    .container-fluid {
+    .container-fluid, .navbar-expand-md > .container-fluid {
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -11427,7 +11427,7 @@ h3 {
 
 p {
   letter-spacing: 0.3px;
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 
 a {
   opacity: 1;
@@ -11474,14 +11474,6 @@ blockquote p {
 .navbar-expand-md .navbar-nav .nav-link:hover {
   color: #212529; }
 
-.navbar-expand-md > .container-fluid {
-  max-width: 1110px;
-  margin: auto; }
-  @media (max-width: 767.98px) {
-    .navbar-expand-md > .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
-
 .menu-item:last-child .nav-link {
   padding-right: 0; }
 
@@ -11525,13 +11517,15 @@ blockquote p {
       font-size: 15px; } }
 
 .logo-container {
-  width: 195px; }
+  width: 225px; }
   @media (max-width: 991px) {
     .logo-container {
-      width: 150px; } }
+      width: 180px; } }
   @media (max-width: 767px) {
     .logo-container {
-      width: 100px; } }
+      width: 130px;
+      margin: auto;
+      padding-bottom: 30px; } }
 
 .logo-container svg {
   width: 100%; }
@@ -11561,12 +11555,6 @@ blockquote p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  @media (max-width: 991px) {
-    .archive-content {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
 
 .archive-content article {
   -webkit-box-flex: 0;
@@ -11610,7 +11598,6 @@ blockquote p {
   color: #E8399E;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1.125rem;
   letter-spacing: 0.09px;
   padding: 0;
   -webkit-transition: none;
@@ -11628,13 +11615,12 @@ blockquote p {
   display: inline-block;
   color: #fff;
   background-color: #E8399E;
-  padding: 5px 10px;
+  padding: 3px 6px;
   font-size: 1rem;
   letter-spacing: 0.09px;
   margin-right: 5px;
   margin-bottom: 10px;
-  text-transform: lowercase;
-  font-weight: 600; }
+  text-transform: lowercase; }
 
 .tags-links a:hover {
   text-decoration: none; }

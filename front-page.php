@@ -113,64 +113,62 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="row">
                 <div class="col-md">
                     <div class="recent-work">
-                        <div class="recent-work-content ">
-                            <h3>Work</h3>
-                            <!-- LOOP THROUGH TWO RECENT WORK POSTS -->
-                            <?php $query = new WP_Query( array( 'cat' => 13, 'posts_per_page' => 2 ) ); ?>
-                            <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <h3>Work</h3>
+                        <!-- LOOP THROUGH TWO RECENT WORK POSTS -->
+                        <?php $query = new WP_Query( array( 'cat' => 13, 'posts_per_page' => 2 ) ); ?>
+                        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-                                <!-- POST -->
-                                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                            <!-- POST -->
+                            <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                                    <div class="work-info">
-                                        <header class="entry-header">
+                                <div class="work-info">
+                                    <header class="entry-header">
 
-                                            <?php
-                                            the_title(
-                                                sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-                                                '</a></h2>'
-                                            );
-                                            ?>
+                                        <?php
+                                        the_title(
+                                            sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+                                            '</a></h2>'
+                                        );
+                                        ?>
 
-                                        </header><!-- .entry-header -->
+                                    </header><!-- .entry-header -->
 
-                                        <div class="entry-content">
+                                    <div class="entry-content">
 
-                                            <?php the_excerpt(); ?>
+                                        <?php the_excerpt(); ?>
 
-                                            <?php
-                                            wp_link_pages(
-                                                array(
-                                                    'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-                                                    'after'  => '</div>',
-                                                )
-                                            );
+                                        <?php
+                                        wp_link_pages(
+                                            array(
+                                                'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                                                'after'  => '</div>',
+                                            )
+                                        );
 
-                                            ?>
+                                        ?>
 
 
-                                        </div><!-- .entry-content -->
+                                    </div><!-- .entry-content -->
 
-                                    </div>
+                                </div>
 
-                                    <div class="blog-thumb-container">
-                                        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-                                    </div>
+                                <div class="blog-thumb-container">
+                                    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                                </div>
 
-                                </article><!-- #post-## -->
+                            </article><!-- #post-## -->
 
-                            <?php endwhile; ?>
+                        <?php endwhile; ?>
 
-                            <?php else : ?>
+                        <?php else : ?>
 
-                                <?php get_template_part( 'loop-templates/content', 'none' ); ?>
+                            <?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-                            <?php endif; ?>
+                        <?php endif; ?>
 
-                            <!-- WORK LINK -->
-                            <div class="more">
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Work ></a>
-                            </div>
+                        <!-- WORK LINK -->
+                        <div class="more">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Work ></a>
                         </div>
                     </div>
                 </div>
