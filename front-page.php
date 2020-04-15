@@ -112,7 +112,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md">
-                    <div class="recent-work">
+                    <div class="content-area recent-work">
                         <h3>Work</h3>
                         <!-- LOOP THROUGH TWO RECENT WORK POSTS -->
                         <?php $query = new WP_Query( array( 'cat' => 13, 'posts_per_page' => 2 ) ); ?>
@@ -180,7 +180,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md">
-                    <div class="home-about">
+                    <div class="content-area">
                         <h3>About</h3>
                         <!-- INCLUDE ABOUT PAGE CONTENT -->
                         <?php $query = new WP_Query( array( 'page_id' => 7 ) ); ?>

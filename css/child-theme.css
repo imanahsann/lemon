@@ -11383,9 +11383,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.wrapper {
-  padding: 30px 0; }
-
 #page-wrapper, #archive-wrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -11410,7 +11407,7 @@ h1, .h1 {
       font-size: 3rem; } }
 
 h2, .h2 {
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
   line-height: 1.3; }
 
 h2 a, .h2 a {
@@ -11533,7 +11530,8 @@ blockquote p {
 #wrapper-footer-full {
   background: #343a40;
   color: #e9ecef;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
 
 #wrapper-footer-full p {
   font-size: 0.8rem;
@@ -11559,7 +11557,8 @@ blockquote p {
 .archive-content article {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
-          flex: 0 0 50%; }
+          flex: 0 0 50%;
+  padding-bottom: calc(30px - 1rem); }
   @media (max-width: 991px) {
     .archive-content article {
       -webkit-box-flex: 0;
@@ -11570,8 +11569,7 @@ blockquote p {
   padding-right: 15px; }
   @media (max-width: 991px) {
     .archive-content article:nth-child(odd) {
-      padding-right: 0;
-      padding-bottom: 10px; } }
+      padding-right: 0; } }
 
 .archive-content article:nth-child(even) {
   padding-left: 15px; }
@@ -11589,7 +11587,7 @@ blockquote p {
   display: -ms-flexbox;
   display: flex;
   height: 40vh;
-  margin-bottom: 18px; }
+  margin-bottom: 1rem; }
 
 .btn-secondary {
   background: none;
@@ -11619,34 +11617,22 @@ blockquote p {
   font-size: 1rem;
   letter-spacing: 0.09px;
   margin-right: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   text-transform: lowercase; }
 
 .tags-links a:hover {
   text-decoration: none; }
 
-.entry-content {
-  padding: 0 0 15px 0; }
-  @media (max-width: 991px) {
-    .entry-content {
-      padding: 0; } }
-
 @media (max-width: 400px) {
   .entry-header, .entry-content {
     padding: 0 15px; } }
-
-.entry-footer {
-  padding: 0 0 20px 0; }
-  @media (max-width: 400px) {
-    .entry-footer {
-      padding: 0 15px 20px 15px; } }
 
 .more {
   font-family: "Playfair Display";
   font-size: 3.125rem;
   font-weight: 700;
   font-style: italic;
-  padding-bottom: 35px; }
+  padding-bottom: 5px; }
   @media (max-width: 767px) {
     .more {
       text-align: center; } }
@@ -11660,10 +11646,10 @@ blockquote p {
 .home-work {
   background: #FFE291; }
 
-.recent-work {
-  padding: 35px 0 0 0; }
+.home-work .content-area {
+  padding: 5px 0 0 0; }
   @media (max-width: 400px) {
-    .recent-work {
+    .home-work .content-area {
       padding: 25px 0 0 0; } }
 
 @media (max-width: 400px) {
@@ -11746,11 +11732,9 @@ blockquote p {
 .recent-work .more {
   margin-top: -10px; }
 
-.home-about {
-  padding: 35px 0 14px 0; }
-  @media (max-width: 400px) {
-    .home-about {
-      padding: 25px 0 5px 0; } }
+@media (max-width: 400px) {
+  .home-about .content-area {
+    padding: 25px 0 5px 0; } }
 
 .home-about h3 {
   text-align: center; }
@@ -11759,6 +11743,9 @@ blockquote p {
   .home-about figcaption, .home-about p {
     padding-right: 15px;
     padding-left: 15px; } }
+
+.home-about p:last-child {
+  margin-bottom: 0; }
 
 .location {
   -webkit-box-flex: 0;
