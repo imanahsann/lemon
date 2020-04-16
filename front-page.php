@@ -5,7 +5,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <main class="site-main" id="main">
@@ -112,7 +111,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md">
-                    <div class="content-area recent-work">
+                    <div class="content-area archive-work">
                         <h3>Work</h3>
                         <!-- LOOP THROUGH TWO RECENT WORK POSTS -->
                         <?php $query = new WP_Query( array( 'cat' => 13, 'posts_per_page' => 2 ) ); ?>

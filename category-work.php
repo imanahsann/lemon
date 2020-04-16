@@ -31,16 +31,14 @@ get_header();
                                 <?php the_archive_title( '<h1 class="entry-title">/', '</h1>' ); ?>
                             </div>
                         </div>
-                        <div class="col-md right-content archive-content">
+                        <div class="col-md right-content archive-work">
                             <?php while ( have_posts() ) : the_post(); ?>
 
                                 <!-- POST -->
-                                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                                <!-- POST -->
+                            <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                                    <div class="blog-thumb-container">
-                                        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-                                    </div>
-
+                                <div class="work-info">
                                     <header class="entry-header">
 
                                         <?php
@@ -69,22 +67,13 @@ get_header();
 
                                     </div><!-- .entry-content -->
 
-                                    <footer class="entry-footer">
+                                </div>
 
-                                    <?php
+                                <div class="blog-thumb-container">
+                                    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                                </div>
 
-                                        $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
-
-                                        if ( $tags_list ) {
-                                            /* translators: %s: Tags of current post */
-                                            printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
-                                        }
-
-                                    ?>
-
-                                    </footer><!-- .entry-footer -->
-
-                                </article><!-- #post-## -->
+                            </article><!-- #post-## -->
 
                             <?php endwhile; ?>
                             <div class="archive-pagination">
