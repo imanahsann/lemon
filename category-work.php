@@ -76,9 +76,8 @@ get_header();
                             </article><!-- #post-## -->
 
                             <?php endwhile; ?>
-                            <div class="archive-pagination">
-                                <?php understrap_pagination(); ?>
-                            </div>
+
+                            <?php understrap_pagination(); ?>
 
                         </div>
                     </div>

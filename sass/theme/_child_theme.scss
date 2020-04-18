@@ -474,7 +474,13 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 
 body.category-work article {
     flex-direction: column-reverse;
-    padding: 0 0 30px 0;
+    padding: 0;
+    margin-bottom: 30px;
+    background: $lightgray;
+    border: 1px solid $gray-400;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .archive-work .work-info {
@@ -498,7 +504,10 @@ body.category-work article {
 body.category-work .work-info {
     flex: 0 0 100%;
     display: flex;
-    padding-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .archive-work .entry-header {
@@ -542,7 +551,9 @@ body.category-work .entry-content {
 }
 
 body.category-work .blog-thumb-container {
-    padding-bottom: 20px;
+    padding-bottom: 0;
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .archive-work article img {
@@ -613,7 +624,7 @@ body.category-work .blog-thumb-container {
 // Pagination
 //
 
-.archive-pagination {
+.archive nav {
     margin: -10px auto 0;
 }
 
