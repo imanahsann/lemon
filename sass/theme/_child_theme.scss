@@ -472,17 +472,6 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
 }
 
-body.category-work article {
-    flex-direction: column-reverse;
-    padding: 0;
-    margin-bottom: 30px;
-    background: $lightgray;
-    border: 1px solid $gray-400;
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 .archive-work .work-info {
     flex: 0 0 30%;
     padding-right: 30px;
@@ -501,15 +490,6 @@ body.category-work article {
     }
 }
 
-body.category-work .work-info {
-    flex: 0 0 100%;
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
 .archive-work .entry-header {
     @media (max-width: 767px) {
         flex: 0 0 50%;
@@ -522,12 +502,6 @@ body.category-work .work-info {
     }
 }
 
-body.category-work .entry-header {
-    flex: 0 0 50%;
-    text-align: right;
-    padding-right: 15px;
-}
-
 .archive-work .entry-content {
     @media (max-width: 767px) {
         flex: 0 0 50%;
@@ -538,22 +512,11 @@ body.category-work .entry-header {
     }
 }
 
-body.category-work .entry-content {
-    flex: 0 0 50%;
-    padding-left: 15px;
-}
-
 .archive-work .blog-thumb-container {
     width: 100%;
     @media (max-width: 767px) {
         padding-bottom: 20px;
     }
-}
-
-body.category-work .blog-thumb-container {
-    padding-bottom: 0;
-    position: relative;
-    margin-bottom: 20px;
 }
 
 .archive-work article img {
@@ -621,10 +584,51 @@ body.category-work .blog-thumb-container {
 }
 
 //
+// Work Category
+//
+
+body.category-work article {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-bottom: 30px;
+    background: $lightgray;
+    border: 1px solid $gray-400;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+body.category-work .work-info {
+    flex: 0 0 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+body.category-work .entry-header {
+    flex: 0 0 50%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+body.category-work .entry-content {
+    flex: 0 0 50%;
+    padding-left: 15px;
+}
+
+body.category-work .blog-thumb-container {
+    padding-bottom: 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+//
 // Pagination
 //
 
-.archive nav {
+.archive .site-main nav {
     margin: -10px auto 0;
 }
 
