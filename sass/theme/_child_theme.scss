@@ -57,10 +57,10 @@ body {
 //
 
 h1, .h1 {
-    font-size: 3.75rem;
-    line-height: 1.5;
+    font-size: 3.5rem;
+    line-height: 1.4;
     font-style: italic;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     @media (max-width: 500px) {
         font-size: 3rem;
     }
@@ -120,6 +120,11 @@ blockquote p {
 
 code {
     word-break: break-all;
+}
+
+.wp-block-code {
+    background: $lightgray;
+    padding: 15px;
 }
 
 //
@@ -559,6 +564,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     text-transform: lowercase;
     font-size: 3.25rem;
     text-align: right;
+    letter-spacing: -2px;
     @media (max-width: 767px) {
         text-align: left;
     }
@@ -679,8 +685,32 @@ body.category-work .blog-thumb-container {
 // Single post page
 //
 
+h1.entry-title {
+    margin-top: -15px;
+    margin-bottom: 0;
+}
+
 .single .wp-post-image {
     width: 100%;
-    padding-top: 30px;
-    padding-left: 30px;
+    margin: 30px 0;
+}
+
+.single .logo-container {
+    // padding-right: 30px;
+    border-right: 1px solid $gray-800;
+    // width: 240px;
+    // @media (max-width: 991px) {
+    //     width: 195px
+    // }
+}
+
+.logo-title {
+    display: flex;
+    align-items: flex-end;
+    // padding-left: 30px;
+}
+
+.single .page-content {
+    max-width: 850px;
+    margin: auto;
 }

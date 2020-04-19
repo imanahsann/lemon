@@ -13,7 +13,7 @@ get_header();
 		    <div class="row">
 			    <div class="col-md">
                     <div class="row">
-                        <div class="col-md-auto logo-container">
+                        <div class="col-auto logo-container">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248">
                                     <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
@@ -27,13 +27,17 @@ get_header();
                                 </svg>
                             </a>
                         </div>
-                        <div class="col-md right-content single-content">
+                        <div class="col-md logo-title">
                             <?php while ( have_posts() ) : the_post(); ?>
-                            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col right-content single-content">
+                            <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
                             <div class="page-content">
-                                <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-                                <?php the_content(); ?>
-                                <?php endwhile; ?>
+                            <?php the_content(); ?>
+                            <?php endwhile; ?>
                             </div>
                         </div>
                     </div>
