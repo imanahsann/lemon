@@ -124,7 +124,14 @@ code {
 
 .wp-block-code {
     background: $lightgray;
-    padding: 15px;
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 1rem;
+}
+
+ol li {
+    margin-bottom: 1rem;
+    padding-left: 5px;
 }
 
 //
@@ -700,27 +707,29 @@ h1.entry-title {
     margin-bottom: 0;
 }
 
+.single h2 {
+    padding: 20px 0 10px;
+}
+
 .single .wp-post-image {
     width: 100%;
     margin: 30px 0;
 }
 
 .single .logo-container {
-    // padding-right: 30px;
     border-right: 1px solid $gray-800;
-    // width: 240px;
-    // @media (max-width: 991px) {
-    //     width: 195px
-    // }
 }
 
 .logo-title {
     display: flex;
     align-items: flex-end;
-    // padding-left: 30px;
 }
 
 .single .page-content {
     max-width: 850px;
-    margin: auto;
+    margin: 0 auto -1rem;
+}
+
+.single .entry-footer {
+    padding-top: calc(30px - 1rem) ;
 }

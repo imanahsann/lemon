@@ -37,6 +37,20 @@ get_header();
                             <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
                             <div class="page-content">
                             <?php the_content(); ?>
+                            <footer class="entry-footer">
+
+                                    <?php
+
+                                        $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
+
+                                        if ( $tags_list ) {
+                                            /* translators: %s: Tags of current post */
+                                            printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+                                        }
+
+                                    ?>
+
+                                    </footer><!-- .entry-footer -->
                             <?php endwhile; ?>
                             </div>
                         </div>
