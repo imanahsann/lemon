@@ -81,3 +81,14 @@ function prefix_category_title( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'prefix_category_title' );
+
+// Custom template for posts categorized under work
+
+add_filter( 'single_template', function ( $single_template ) {
+
+    if ( has_category( 'work' ) ) {
+        $single_template = dirname( __FILE__ ) . '/single-work.php';
+    }
+    return $single_template;
+
+}, PHP_INT_MAX, 2 );
