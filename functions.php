@@ -56,7 +56,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 			'understrap' ) . '</a></p>';
 		}
 		if ( in_category( 'Work' ) ) {
-			$post_excerpt1 = $post_excerpt . ' <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'View Details',
+			$post_excerpt1 = $post_excerpt . ' <p class="view-details"><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'View Details',
 			'understrap' ) . '</a></p>';
 		}
 		return $post_excerpt1;

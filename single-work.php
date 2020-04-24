@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<main class="site-main single-main" id="main">
+<main class="site-main single-main single-work" id="main">
     <div class="wrapper" id="page-wrapper">
 	    <div class="container-fluid">
 		    <div class="row">
@@ -31,27 +31,30 @@ get_header();
                             <?php while ( have_posts() ) : the_post(); ?>
                                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                                 <?php the_excerpt(); ?>
+                                <div class="work-links">
+                                    <a class="work-link" href="<?php echo get_post_meta($post->ID, 'Live', true); ?>" target="_blank">Live</a>
+                                    <a class="work-link" href="<?php echo get_post_meta($post->ID, 'Github', true); ?>" target="_blank">Github</a>
+                                </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col right-content single-content">
-                            <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
                             <div class="page-content">
                             <?php the_content(); ?>
                             <footer class="entry-footer">
 
-                                    <?php
+                                <?php
 
-                                        $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
+                                    $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
 
-                                        if ( $tags_list ) {
-                                            /* translators: %s: Tags of current post */
-                                            printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
-                                        }
+                                    if ( $tags_list ) {
+                                        /* translators: %s: Tags of current post */
+                                        printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+                                    }
 
-                                    ?>
+                                ?>
 
-                                    </footer><!-- .entry-footer -->
+                            </footer><!-- .entry-footer -->
                             <?php endwhile; ?>
                             </div>
                         </div>

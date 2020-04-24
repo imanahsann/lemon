@@ -12018,4 +12018,46 @@ h1.entry-title {
 .single .entry-footer {
   padding-top: calc(30px - 1rem); }
 
+.single-work .view-details {
+  display: none; }
+
+.single-work .logo-title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.work-link {
+  border: 1px solid #343a40;
+  color: #212529;
+  padding: 10px 15px;
+  display: inline-block; }
+  .work-link:first-child {
+    margin-right: 5px; }
+
+.work-link:hover {
+  background: #E8399E;
+  opacity: 1;
+  color: #212529;
+  text-decoration: none; }
+
+.single-work .page-content {
+  max-width: none;
+  padding-top: 30px; }
+
+.single-work img {
+  width: 100%; }
+
+.single-work figure {
+  margin-bottom: 30px; }
+
+.single-work .entry-footer {
+  padding-top: 0; }
+
 /*# sourceMappingURL=child-theme.css.map */
