@@ -11659,7 +11659,9 @@ ol li {
 .tags-links {
   padding: 0; }
 
-.tags-links a {
+.tags-links a, .archive-title h1.tag-title {
+  font-family: "Open Sans";
+  font-style: normal;
   display: inline-block;
   color: #fff;
   background-color: #E8399E;
@@ -11935,6 +11937,12 @@ body.category-work .blog-thumb-container {
   padding-bottom: 0;
   position: relative;
   margin-bottom: 20px; }
+
+.archive-title h1.tag-title {
+  margin: 15px 0 0 0; }
+
+.tag .archive-title {
+  text-align: right; }
 
 .archive .site-main nav {
   margin: -10px auto 0; }

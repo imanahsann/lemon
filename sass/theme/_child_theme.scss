@@ -292,7 +292,7 @@ ol li {
 }
 
 //
-// Lists of posts
+// Archives
 //
 
 .archive-content {
@@ -361,7 +361,9 @@ ol li {
     padding: 0;
 }
 
-.tags-links a {
+.tags-links a, .archive-title h1.tag-title {
+    font-family: $font-family-sans-serif;
+    font-style: normal;
     display: inline-block;
     color: $white;
     background-color: $secondary;
@@ -669,6 +671,18 @@ body.category-work .blog-thumb-container {
     padding-bottom: 0;
     position: relative;
     margin-bottom: 20px;
+}
+
+//
+// Tag archive
+//
+
+.archive-title h1.tag-title {
+    margin: 15px 0 0 0;
+}
+
+.tag .archive-title {
+    text-align: right;
 }
 
 //

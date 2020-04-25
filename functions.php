@@ -92,3 +92,13 @@ add_filter( 'single_template', function ( $single_template ) {
     return $single_template;
 
 }, PHP_INT_MAX, 2 );
+
+// Remove tag prefix on tag pages
+
+function prefix_tag_title( $title ) {
+    if ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'prefix_tag_title' );
