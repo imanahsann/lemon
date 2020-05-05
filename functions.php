@@ -102,3 +102,18 @@ function prefix_tag_title( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'prefix_tag_title' );
+
+// Add work post type to category pages
+
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if( is_category() ) {
+    $post_type = get_query_var('post_type');
+    if($post_type)
+        $post_type = $post_type;
+    else
+        $post_type = array('nav_menu_item', 'post', 'work');
+    $query->set('post_type',$post_type);
+    return $query;
+    }
+}

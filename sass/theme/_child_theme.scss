@@ -254,6 +254,11 @@ ol li {
 
 .logo-container a, .logo-container a:hover, .logo-container a:active, .logo-container a:visited, .logo-container a:focus {
     text-decoration: none;
+    opacity: 1;
+}
+
+.logo-container a:hover svg {
+    opacity: 0.8;
 }
 
 //

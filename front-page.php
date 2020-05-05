@@ -114,7 +114,7 @@ get_header();
                     <div class="content-area archive-work">
                         <h3>Work</h3>
                         <!-- LOOP THROUGH TWO RECENT WORK POSTS -->
-                        <?php $query = new WP_Query( array( 'cat' => 13, 'posts_per_page' => 2 ) ); ?>
+                        <?php $query = new WP_Query( array( 'post_type' => 'work', 'posts_per_page' => 2 ) ); ?>
                         <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
                             <!-- POST -->
