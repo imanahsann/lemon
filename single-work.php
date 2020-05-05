@@ -47,9 +47,9 @@ get_header();
                                         $terms = get_the_terms($post->ID, 'tool');
                                         if ($terms) {
                                             foreach ($terms as $term) {
-                                            $out[] = '<a class="' .$term->slug .'" href="' .get_term_link( $term->slug, 'tool') .'">' .$term->name .'</a>';
+                                            $out[] = '<a class="' .$term->slug .'" href="' .get_term_link( $term->slug, 'tool') .'">#' .$term->name .'</a>';
                                         }
-                                            echo join( ', ', $out );
+                                            echo join( ' ', $out );
                                         }
                                     ?>
                                 </div>
