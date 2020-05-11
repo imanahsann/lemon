@@ -29,7 +29,7 @@ get_header();
 
                             <div class="archive-title">
                                 <h1>/blog</h1>
-                                <?php the_archive_title( '<h1 class="tag-title">#', '</h1>' ); ?>
+                                <?php the_archive_title( '<h1 class="tag-title"><span>#', '</span></h1>' ); ?>
                             </div>
                         </div>
                         <div class="col-md right-content archive-content">

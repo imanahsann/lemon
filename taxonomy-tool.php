@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<main class="site-main archive-main" id="main">
+<main class="site-main archive-main tag" id="main">
     <div class="wrapper" id="archive-wrapper">
 	    <div class="container-fluid">
 		    <div class="row">
@@ -28,8 +28,8 @@ get_header();
                             </a>
 
                             <div class="archive-title">
-
-                                <?php the_archive_title( '<h1>/work <span class="tag-title">#', '</span></h1>' ); ?>
+                                <h1>/work</h1>
+                                <?php the_archive_title( '<h1 class="tag-title"><span>#', '</span></h1>' ); ?>
                             </div>
                         </div>
                         <div class="col-md right-content archive-work">

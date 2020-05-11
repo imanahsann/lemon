@@ -389,7 +389,7 @@ ol li {
     font-size: 0.875rem;
     letter-spacing: 0.09px;
     margin-right: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-transform: lowercase;
 }
 
@@ -695,7 +695,15 @@ body.category-work .blog-thumb-container {
 
 .archive-title h1.tag-title {
     font-size: 1.3rem;
-    margin: 8px 5px 0 0;
+    margin: 8px 0 0 0;
+    background: none;
+}
+
+.tag-title span {
+    background: $secondary;
+    box-shadow: -4px 0px 0 2px $secondary,
+    4px 0px 0 2px $secondary,
+    0 0 0 2px $secondary;
 }
 
 .tag .archive-title {
@@ -809,7 +817,7 @@ h1.entry-title {
 
 .single .page-content {
     max-width: 750px;
-    margin: 0 auto -1rem;
+    margin: 0 auto -0.5rem;
 }
 
 .single .entry-footer {
