@@ -15,7 +15,8 @@ get_header();
                     <div class="row">
                         <div class="col-md-auto logo-container">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="194" viewBox="0 24 194 248" role="img" aria-label="9th & Irving">
+                                    <title>9th & Irving</title>
                                     <g id="Logo" data-name="Logo" transform="translate(-677 -128)">
                                         <g id="Subheading" transform="translate(740 128)">
                                         <text id="_9th" data-name="9th" transform="translate(0 97)" fill="#1a1a1a" font-size="90" font-family="PlayfairDisplay-BoldItalic, Playfair Display" font-weight="700" font-style="italic" letter-spacing="-0.06em"><tspan x="0" y="0">9th</tspan></text>
