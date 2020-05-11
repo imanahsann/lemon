@@ -645,7 +645,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 // Work Category
 //
 
-body.category-work article {
+body.category-work article, body.tax-tool article {
     flex-direction: column-reverse;
     padding: 0;
     margin-bottom: 30px;
@@ -656,7 +656,7 @@ body.category-work article {
     }
 }
 
-body.category-work .work-info {
+body.category-work .work-info, body.tax-tool .work-info {
     flex: 0 0 100%;
     display: flex;
     margin-top: 20px;
@@ -665,7 +665,7 @@ body.category-work .work-info {
     padding-left: 15px;
 }
 
-body.category-work .entry-header {
+body.category-work .entry-header, body.tax-tool .entry-header {
     flex: 0 0 50%;
     text-align: right;
     padding-right: 15px;
@@ -675,7 +675,7 @@ body.category-work .entry-header {
     }
 }
 
-body.category-work .entry-content {
+body.category-work .entry-content, body.tax-tool .entry-content {
     flex: 0 0 50%;
     padding-left: 15px;
     @media (max-width: 500px) {
@@ -683,10 +683,19 @@ body.category-work .entry-content {
     }
 }
 
-body.category-work .blog-thumb-container {
+body.category-work .blog-thumb-container, body.tax-tool .blog-thumb-container {
     padding-bottom: 0;
     position: relative;
     margin-bottom: 20px;
+    @media (max-width: 500px) {
+        padding: 15px;
+    }
+}
+
+body.category-work .blog-thumb-container img, body.tax-tool .blog-thumb-container img {
+    @media (max-width: 500px) {
+        border: 1px solid $gray-400;
+    }
 }
 
 //
@@ -697,6 +706,20 @@ body.category-work .blog-thumb-container {
     font-size: 1.3rem;
     margin: 8px 0 0 0;
     background: none;
+    @media (max-width: 767px) {
+        margin: 0 0 17px 0;
+    }
+    @media (max-width: 500px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.tax-tool h1.tag-title {
+    margin: 0;
+    @media (max-width: 767px) {
+        margin: 0 0 17px 0;
+    }
 }
 
 .tag-title span {
@@ -708,6 +731,9 @@ body.category-work .blog-thumb-container {
 
 .tag .archive-title {
     text-align: right;
+    @media (max-width: 767px) {
+        text-align: left;
+    }
 }
 
 //
