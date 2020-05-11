@@ -300,6 +300,10 @@ ol li {
 // Archives
 //
 
+#archive-wrapper {
+    padding-bottom: 0;
+}
+
 .archive-content {
     display: flex;
     flex-wrap: wrap;
@@ -308,6 +312,15 @@ ol li {
 .archive-content article {
     flex: 0 0 50%;
     padding-bottom: calc(40px - 1rem);
+    &:last-child {
+        padding-bottom: calc(30px - 1rem);
+    }
+    &:nth-last-child(2) {
+        padding-bottom: calc(30px - 1rem);
+        @media (max-width: 991px) {
+            padding-bottom: calc(40px - 1rem);
+        }
+    }
     @media (max-width: 991px) {
         flex: 0 0 100%;
     }
@@ -366,7 +379,7 @@ ol li {
     padding: 0;
 }
 
-.tags-links a, .archive-title h1.tag-title {
+.tags-links a, .archive-title .tag-title {
     font-family: $font-family-sans-serif;
     font-style: normal;
     display: inline-block;
@@ -603,6 +616,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     font-size: 3.25rem;
     text-align: right;
     letter-spacing: -2px;
+    margin-right: 5px;
     @media (max-width: 767px) {
         text-align: left;
     }
@@ -637,9 +651,6 @@ body.category-work article {
     margin-bottom: 30px;
     background: $lightgray;
     border: 1px solid $gray-400;
-    &:last-child {
-        margin-bottom: 0;
-    }
     @media (max-width: 500px) {
         border: 0;
     }
@@ -683,7 +694,8 @@ body.category-work .blog-thumb-container {
 //
 
 .archive-title h1.tag-title {
-    margin: 15px 0 0 0;
+    font-size: 1.3rem;
+    margin: 8px 5px 0 0;
 }
 
 .tag .archive-title {
@@ -696,10 +708,15 @@ body.category-work .blog-thumb-container {
 
 .archive .site-main nav {
     margin: -10px auto 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .pagination {
     margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
 }
 
 .page-link {

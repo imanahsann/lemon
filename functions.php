@@ -72,16 +72,6 @@ function filter_post_tag_term_links($list) {
 
 add_filter( 'the_tags', 'filter_post_tag_term_links' );
 
-// Remove category prefix on category pages
-
-function prefix_category_title( $title ) {
-    if ( is_category() ) {
-        $title = single_cat_title( '', false );
-    }
-    return $title;
-}
-add_filter( 'get_the_archive_title', 'prefix_category_title' );
-
 // Custom template for posts categorized under work
 
 add_filter( 'single_template', function ( $single_template ) {
@@ -93,15 +83,20 @@ add_filter( 'single_template', function ( $single_template ) {
 
 }, PHP_INT_MAX, 2 );
 
-// Remove tag prefix on tag pages
+// Remove title prefixes on archive pages
 
-function prefix_tag_title( $title ) {
-    if ( is_tag() ) {
-        $title = single_tag_title( '', false );
-    }
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_tax() ) { //for custom post types
+            $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+        } elseif (is_post_type_archive()) {
+            $title = post_type_archive_title( '', false );
+        }
     return $title;
-}
-add_filter( 'get_the_archive_title', 'prefix_tag_title' );
+});
 
 // Add work post type to category pages
 

@@ -11601,6 +11601,9 @@ ol li {
   top: 4px;
   right: -13px; }
 
+#archive-wrapper {
+  padding-bottom: 0; }
+
 .archive-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11613,6 +11616,13 @@ ol li {
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   padding-bottom: calc(40px - 1rem); }
+  .archive-content article:last-child {
+    padding-bottom: calc(30px - 1rem); }
+  .archive-content article:nth-last-child(2) {
+    padding-bottom: calc(30px - 1rem); }
+    @media (max-width: 991px) {
+      .archive-content article:nth-last-child(2) {
+        padding-bottom: calc(40px - 1rem); } }
   @media (max-width: 991px) {
     .archive-content article {
       -webkit-box-flex: 0;
@@ -11663,7 +11673,7 @@ ol li {
 .tags-links {
   padding: 0; }
 
-.tags-links a, .archive-title h1.tag-title {
+.tags-links a, .archive-title .tag-title {
   font-family: "Open Sans";
   font-style: normal;
   display: inline-block;
@@ -11870,7 +11880,8 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
   text-transform: lowercase;
   font-size: 3.25rem;
   text-align: right;
-  letter-spacing: -2px; }
+  letter-spacing: -2px;
+  margin-right: 5px; }
   @media (max-width: 767px) {
     .page-title h1, .archive-title h1 {
       text-align: left; } }
@@ -11899,8 +11910,6 @@ body.category-work article {
   margin-bottom: 30px;
   background: #FAFAFA;
   border: 1px solid #ced4da; }
-  body.category-work article:last-child {
-    margin-bottom: 0; }
   @media (max-width: 500px) {
     body.category-work article {
       border: 0; } }
@@ -11943,16 +11952,25 @@ body.category-work .blog-thumb-container {
   margin-bottom: 20px; }
 
 .archive-title h1.tag-title {
-  margin: 15px 0 0 0; }
+  font-size: 1.3rem;
+  margin: 8px 5px 0 0; }
 
 .tag .archive-title {
   text-align: right; }
 
 .archive .site-main nav {
-  margin: -10px auto 0; }
+  margin: -10px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .pagination {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px; }
 
 .page-link {
   color: #000000;

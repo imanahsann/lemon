@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<main class="site-main archive-main tag" id="main">
+<main class="site-main archive-main" id="main">
     <div class="wrapper" id="archive-wrapper">
 	    <div class="container-fluid">
 		    <div class="row">
@@ -28,20 +28,18 @@ get_header();
                             </a>
 
                             <div class="archive-title">
-                                <h1>/blog</h1>
-                                <?php the_archive_title( '<h1 class="tag-title">#', '</h1>' ); ?>
+
+                                <?php the_archive_title( '<h1>/work <span class="tag-title">#', '</span></h1>' ); ?>
                             </div>
                         </div>
-                        <div class="col-md right-content archive-content">
+                        <div class="col-md right-content archive-work">
                             <?php while ( have_posts() ) : the_post(); ?>
 
                                 <!-- POST -->
-                                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                                <!-- POST -->
+                            <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                                    <div class="blog-thumb-container">
-                                        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-                                    </div>
-
+                                <div class="work-info">
                                     <header class="entry-header">
 
                                         <?php
@@ -70,24 +68,16 @@ get_header();
 
                                     </div><!-- .entry-content -->
 
-                                    <footer class="entry-footer">
+                                </div>
 
-                                    <?php
+                                <div class="blog-thumb-container">
+                                    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                                </div>
 
-                                        $tags_list = get_the_tag_list( '', esc_html__( ' ', 'understrap' ) );
-
-                                        if ( $tags_list ) {
-                                            /* translators: %s: Tags of current post */
-                                            printf( '<div class="tags-links">' . esc_html__( '%s', 'understrap' ) . '</div>', $tags_list ); // WPCS: XSS OK.
-                                        }
-
-                                    ?>
-
-                                    </footer><!-- .entry-footer -->
-
-                                </article><!-- #post-## -->
+                            </article><!-- #post-## -->
 
                             <?php endwhile; ?>
+
                             <?php understrap_pagination(); ?>
 
                         </div>
