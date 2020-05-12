@@ -22,6 +22,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     height: 100vh;
+    font-weight: 300;
 }
 
 .site {
@@ -148,6 +149,11 @@ ol {
 ol li {
     margin-bottom: 1rem;
     padding-left: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 //
@@ -282,6 +288,7 @@ ol li {
     transition: none;
     color: $secondary;
     position: relative;
+    font-weight: 400;
 }
 
 #wrapper-footer-full a:hover {
@@ -818,7 +825,7 @@ h1.entry-title {
 }
 
 .single h2 {
-    padding: 20px 0 10px;
+    margin: 1.6rem 0;
     @media (max-width: 767px) {
         padding: 10px 0 0;
     }
@@ -828,12 +835,27 @@ h1.entry-title {
     }
 }
 
+.single h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+}
+
 .single .wp-post-image {
     width: 100%;
     margin: 30px 0;
     @media (max-width: 767px) {
         margin: 0.5rem 0;
     }
+}
+
+// Featured image caption
+
+.ccfic {
+    margin-top: calc(0.5rem - 30px);
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-style: italic;
 }
 
 .single .logo-container {
@@ -848,9 +870,24 @@ h1.entry-title {
     align-items: flex-end;
 }
 
+
 .single .page-content {
     max-width: 750px;
     margin: 0 auto -0.5rem;
+}
+
+.single .page-content ul li a {
+    display: block;
+    background: $lightgray;
+    padding: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.single .page-content ul li a:hover {
+    text-decoration: none;
+    background: $secondary;
+    color: $white;
+    opacity: 1;
 }
 
 .single .entry-footer {

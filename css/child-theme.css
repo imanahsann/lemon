@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600|Playfair+Display:400,400i,700i|Source+Code+Pro:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600|Playfair+Display:400,400i,700i|Source+Code+Pro:300&display=swap");
 /*!
  * Bootstrap v4.1.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -11372,7 +11372,8 @@ html, body {
 
 body {
   -webkit-font-smoothing: antialiased;
-  height: 100vh; }
+  height: 100vh;
+  font-weight: 300; }
 
 .site {
   min-height: 100%;
@@ -11486,6 +11487,10 @@ ol li {
   margin-bottom: 1rem;
   padding-left: 5px; }
 
+ul {
+  list-style: none;
+  padding-left: 0; }
+
 .navbar {
   padding: 0.5rem 0; }
 
@@ -11589,7 +11594,8 @@ ol li {
   -webkit-transition: none;
   transition: none;
   color: #E8399E;
-  position: relative; }
+  position: relative;
+  font-weight: 400; }
 
 #wrapper-footer-full a:hover {
   text-decoration: none; }
@@ -12054,7 +12060,7 @@ h1.entry-title {
       font-size: 2.5rem; } }
 
 .single h2 {
-  padding: 20px 0 10px; }
+  margin: 1.6rem 0; }
   @media (max-width: 767px) {
     .single h2 {
       padding: 10px 0 0; } }
@@ -12063,12 +12069,23 @@ h1.entry-title {
       padding-left: 15px;
       padding-right: 15px; } }
 
+.single h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0; }
+
 .single .wp-post-image {
   width: 100%;
   margin: 30px 0; }
   @media (max-width: 767px) {
     .single .wp-post-image {
       margin: 0.5rem 0; } }
+
+.ccfic {
+  margin-top: calc(0.5rem - 30px);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-style: italic; }
 
 .single .logo-container {
   border-right: 1px solid #343a40; }
@@ -12087,6 +12104,18 @@ h1.entry-title {
 .single .page-content {
   max-width: 750px;
   margin: 0 auto -0.5rem; }
+
+.single .page-content ul li a {
+  display: block;
+  background: #FAFAFA;
+  padding: 15px;
+  margin-bottom: 0.5rem; }
+
+.single .page-content ul li a:hover {
+  text-decoration: none;
+  background: #E8399E;
+  color: #fff;
+  opacity: 1; }
 
 .single .entry-footer {
   padding-top: calc(30px - 1rem); }

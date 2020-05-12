@@ -100,7 +100,7 @@ get_header();
 
                             <!-- BLOG LINK -->
                             <div class="more">
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Blog ></a>
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?cat=9/">More Blog ></a>
                             </div>
 
                         </div>
@@ -172,7 +172,7 @@ get_header();
 
                         <!-- WORK LINK -->
                         <div class="more">
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?page_id=10/">More Work ></a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/?cat=13/">More Work ></a>
                         </div>
                     </div>
                 </div>
