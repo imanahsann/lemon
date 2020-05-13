@@ -12081,6 +12081,12 @@ h1.entry-title {
     .single .wp-post-image {
       margin: 0.5rem 0; } }
 
+.single .wp-block-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+  .single .wp-block-image:first-child {
+    margin-top: 0; }
+
 .ccfic {
   margin-top: calc(0.5rem - 30px);
   margin-bottom: 1.2rem;

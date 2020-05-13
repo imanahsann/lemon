@@ -849,6 +849,14 @@ h1.entry-title {
     }
 }
 
+.single .wp-block-image {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
 // Featured image caption
 
 .ccfic {
