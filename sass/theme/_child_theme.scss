@@ -215,9 +215,14 @@ ul {
     padding-bottom: 0.5rem;
 }
 
+#social-menu .nav-link[title=Twitter] {
+    padding-bottom: calc(0.5rem - 1px);
+}
+
 .fa-twitter {
     font-size: 21px;
-    line-height: 16px;
+    line-height: 17px;
+    height: 16px;
     @media (max-width: 500px) {
         font-size: 16px;
     }
@@ -226,6 +231,17 @@ ul {
 .fa-envelope {
     font-size: 19px;
     line-height: 16px;
+    height: 16px;
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
+}
+
+.fa-github-alt {
+    font-size: 19px;
+    line-height: 16px;
+    height: 16px;
+    margin-left: 1px;
     @media (max-width: 500px) {
         font-size: 15px;
     }
