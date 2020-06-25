@@ -545,15 +545,20 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 }
 
 .archive-work article {
-    display: flex;
     padding: 0 0 40px 0;
     @media (max-width: 767px) {
-        flex-direction: column-reverse;
         padding: 0 0 30px 0;
     }
 }
 
-.archive-work .work-info {
+.home .archive-work article {
+    display: flex;
+    @media (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.home .archive-work .work-info {
     flex: 0 0 30%;
     padding-right: 30px;
     @media (max-width: 991px) {
@@ -571,7 +576,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
 }
 
-.archive-work .entry-header {
+.home .archive-work .entry-header {
     @media (max-width: 767px) {
         flex: 0 0 50%;
         text-align: right;
@@ -583,7 +588,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
 }
 
-.archive-work .entry-content {
+.home .archive-work .entry-content {
     @media (max-width: 767px) {
         flex: 0 0 50%;
         padding-left: 15px;
@@ -605,10 +610,9 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     max-width: 100%;
 }
 
-.archive-work .more {
+.home .archive-work .more {
     margin-top: -10px;
 }
-
 // About
 
 .home-about h3 {
