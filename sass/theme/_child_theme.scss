@@ -338,10 +338,10 @@ ul {
     flex: 0 0 50%;
     padding-bottom: calc(40px - 1rem);
     &:last-child {
-        padding-bottom: calc(30px - 1rem);
+        padding-bottom: calc(30px - 0.5rem);
     }
     &:nth-last-child(2) {
-        padding-bottom: calc(30px - 1rem);
+        padding-bottom: calc(30px - 0.5rem);
         @media (max-width: 991px) {
             padding-bottom: calc(40px - 1rem);
         }
@@ -432,6 +432,21 @@ ul {
 // Forms
 //
 
+input:focus, textarea:focus {
+    background: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px $lightgray inset;
+  transition: background-color 5000s ease-in-out 0s;
+  font-size: 1rem;
+}
+
 .wpforms-field-container {
     display: flex;
     flex-wrap: wrap;
@@ -501,6 +516,15 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     font-size: 1rem;
 }
 
+.wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+    background: none;
+    border: none;
+}
+
+.wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full {
+    padding: 0;
+}
+
 //
 // Home page
 //
@@ -549,12 +573,24 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     @media (max-width: 767px) {
         padding: 0 0 30px 0;
     }
+    @media (max-width: 500px) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 .home .archive-work article {
     display: flex;
     @media (max-width: 767px) {
         flex-direction: column-reverse;
+    }
+}
+
+body.category-work .archive-work article, body.tax-tool .archive-work article {
+    padding: 0 0 30px 0;
+    @media (max-width: 500px) {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
 
@@ -571,8 +607,6 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
     @media (max-width: 500px) {
         flex-direction: column;
-        padding-right: 15px;
-        padding-left: 15px;
     }
 }
 
@@ -598,7 +632,7 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
 }
 
-.archive-work .blog-thumb-container {
+.home .archive-work .blog-thumb-container {
     width: 100%;
     @media (max-width: 767px) {
         padding-bottom: 20px;
@@ -674,58 +708,12 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 // Work Category
 //
 
-body.category-work article, body.tax-tool article {
-    flex-direction: column-reverse;
-    padding: 0;
-    margin-bottom: 30px;
-    background: $lightgray;
-    border: 1px solid $gray-400;
-    @media (max-width: 500px) {
-        border: 0;
-    }
-}
-
-body.category-work .work-info, body.tax-tool .work-info {
-    flex: 0 0 100%;
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-body.category-work .entry-header, body.tax-tool .entry-header {
-    flex: 0 0 50%;
-    text-align: right;
-    padding-right: 15px;
-    @media (max-width: 500px) {
-        text-align: left;
-        padding-right: 0;
-    }
-}
-
-body.category-work .entry-content, body.tax-tool .entry-content {
-    flex: 0 0 50%;
-    padding-left: 15px;
-    @media (max-width: 500px) {
-        padding: 0;
-    }
-}
-
 body.category-work .blog-thumb-container, body.tax-tool .blog-thumb-container {
-    padding-bottom: 0;
-    position: relative;
-    margin-bottom: 20px;
-    @media (max-width: 500px) {
-        padding: 30px 15px 0 15px;
-        margin-bottom: 0;
-    }
+    display: block;
 }
 
 body.category-work .blog-thumb-container img, body.tax-tool .blog-thumb-container img {
-    @media (max-width: 500px) {
-        border: 1px solid $gray-400;
-    }
+    border: 1px solid $gray-400;
 }
 
 //

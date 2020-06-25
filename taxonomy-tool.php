@@ -37,39 +37,7 @@ get_header();
                             <?php while ( have_posts() ) : the_post(); ?>
 
                                 <!-- POST -->
-                                <!-- POST -->
                             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-                                <div class="work-info">
-                                    <header class="entry-header">
-
-                                        <?php
-                                        the_title(
-                                            sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-                                            '</a></h2>'
-                                        );
-                                        ?>
-
-                                    </header><!-- .entry-header -->
-
-                                    <div class="entry-content">
-
-                                        <?php the_excerpt(); ?>
-
-                                        <?php
-                                        wp_link_pages(
-                                            array(
-                                                'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-                                                'after'  => '</div>',
-                                            )
-                                        );
-
-                                        ?>
-
-
-                                    </div><!-- .entry-content -->
-
-                                </div>
 
                                 <?php
                                     echo '<a class="blog-thumb-container" href="' . get_permalink( $_post->ID ) . '" title="' . esc_attr( $_post->post_title ) . '">';
